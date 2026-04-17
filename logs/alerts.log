@@ -1,0 +1,620 @@
+2026-04-17 11:29:02,722 - ALERT - IP: 192.168.1.16 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:03,784 - ALERT - IP: 192.168.1.150 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:04,818 - ALERT - IP: 192.168.1.92 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:05,862 - ALERT - IP: 192.168.1.159 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:29:06,895 - ALERT - IP: 192.168.1.80 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:07,931 - ALERT - IP: 192.168.1.252 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:08,967 - ALERT - IP: 192.168.1.236 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:10,033 - ALERT - IP: 192.168.1.100 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:11,071 - ALERT - IP: 192.168.1.206 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:29:12,109 - ALERT - IP: 192.168.1.137 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:13,146 - ALERT - IP: 192.168.1.15 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:14,182 - ALERT - IP: 192.168.1.60 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:15,218 - ALERT - IP: 192.168.1.191 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:16,254 - ALERT - IP: 192.168.1.133 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:17,291 - ALERT - IP: 192.168.1.68 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:18,325 - ALERT - IP: 192.168.1.232 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:19,362 - ALERT - IP: 192.168.1.112 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:20,397 - ALERT - IP: 192.168.1.8 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:21,435 - ALERT - IP: 192.168.1.157 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:22,471 - ALERT - IP: 192.168.1.197 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:23,508 - ALERT - IP: 192.168.1.11 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:24,541 - ALERT - IP: 192.168.1.156 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:25,577 - ALERT - IP: 192.168.1.173 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:26,613 - ALERT - IP: 192.168.1.164 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:27,651 - ALERT - IP: 192.168.1.148 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:28,685 - ALERT - IP: 192.168.1.143 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:29,721 - ALERT - IP: 192.168.1.228 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:30,764 - ALERT - IP: 192.168.1.156 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:31,797 - ALERT - IP: 192.168.1.244 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:32,834 - ALERT - IP: 192.168.1.21 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:33,868 - ALERT - IP: 192.168.1.152 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:34,905 - ALERT - IP: 192.168.1.66 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:29:35,949 - ALERT - IP: 192.168.1.216 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:36,992 - ALERT - IP: 192.168.1.107 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:38,042 - ALERT - IP: 192.168.1.188 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:39,090 - ALERT - IP: 192.168.1.170 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:40,132 - ALERT - IP: 192.168.1.53 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:41,169 - ALERT - IP: 192.168.1.190 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:42,216 - ALERT - IP: 192.168.1.253 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:43,251 - ALERT - IP: 192.168.1.230 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:29:44,304 - ALERT - IP: 192.168.1.193 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:29:45,344 - ALERT - IP: 192.168.1.166 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:46,386 - ALERT - IP: 192.168.1.184 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:47,425 - ALERT - IP: 192.168.1.181 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:29:48,464 - ALERT - IP: 192.168.1.90 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:49,501 - ALERT - IP: 192.168.1.32 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:50,537 - ALERT - IP: 192.168.1.194 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:51,574 - ALERT - IP: 192.168.1.15 | Attack: Web Attack | MITRE: Initial Access(T1190) | Action: Block request
+2026-04-17 11:29:52,608 - ALERT - IP: 192.168.1.213 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:53,646 - ALERT - IP: 192.168.1.129 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:54,687 - ALERT - IP: 192.168.1.107 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:29:55,725 - ALERT - IP: 192.168.1.34 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:56,760 - ALERT - IP: 192.168.1.177 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:29:57,798 - ALERT - IP: 192.168.1.131 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:29:58,834 - ALERT - IP: 192.168.1.165 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:29:59,870 - ALERT - IP: 192.168.1.183 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:00,904 - ALERT - IP: 192.168.1.30 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:01,941 - ALERT - IP: 192.168.1.99 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:02,977 - ALERT - IP: 192.168.1.76 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:04,014 - ALERT - IP: 192.168.1.175 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:05,048 - ALERT - IP: 192.168.1.120 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:06,087 - ALERT - IP: 192.168.1.104 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:07,123 - ALERT - IP: 192.168.1.66 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:30:08,159 - ALERT - IP: 192.168.1.146 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:09,192 - ALERT - IP: 192.168.1.240 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:10,229 - ALERT - IP: 192.168.1.101 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:11,270 - ALERT - IP: 192.168.1.103 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:12,307 - ALERT - IP: 192.168.1.27 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:13,343 - ALERT - IP: 192.168.1.39 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:14,386 - ALERT - IP: 192.168.1.24 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:15,426 - ALERT - IP: 192.168.1.186 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:16,471 - ALERT - IP: 192.168.1.113 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:17,507 - ALERT - IP: 192.168.1.194 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:18,547 - ALERT - IP: 192.168.1.179 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:19,583 - ALERT - IP: 192.168.1.16 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:20,626 - ALERT - IP: 192.168.1.218 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:21,664 - ALERT - IP: 192.168.1.197 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:22,703 - ALERT - IP: 192.168.1.52 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:23,741 - ALERT - IP: 192.168.1.145 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:24,776 - ALERT - IP: 192.168.1.247 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:25,814 - ALERT - IP: 192.168.1.133 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:30:26,849 - ALERT - IP: 192.168.1.123 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:27,899 - ALERT - IP: 192.168.1.249 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:28,946 - ALERT - IP: 192.168.1.183 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:29,984 - ALERT - IP: 192.168.1.159 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:30:31,020 - ALERT - IP: 192.168.1.134 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:32,055 - ALERT - IP: 192.168.1.162 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:33,091 - ALERT - IP: 192.168.1.108 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:34,132 - ALERT - IP: 192.168.1.241 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:35,170 - ALERT - IP: 192.168.1.213 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:36,218 - ALERT - IP: 192.168.1.179 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:37,265 - ALERT - IP: 192.168.1.85 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:38,299 - ALERT - IP: 192.168.1.222 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:30:39,343 - ALERT - IP: 192.168.1.226 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:40,378 - ALERT - IP: 192.168.1.246 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:41,414 - ALERT - IP: 192.168.1.86 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:42,451 - ALERT - IP: 192.168.1.35 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:43,489 - ALERT - IP: 192.168.1.136 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:44,529 - ALERT - IP: 192.168.1.140 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:45,576 - ALERT - IP: 192.168.1.162 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:46,619 - ALERT - IP: 192.168.1.118 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:47,657 - ALERT - IP: 192.168.1.157 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:30:48,703 - ALERT - IP: 192.168.1.53 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:49,741 - ALERT - IP: 192.168.1.204 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:50,780 - ALERT - IP: 192.168.1.5 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:30:51,820 - ALERT - IP: 192.168.1.207 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:52,858 - ALERT - IP: 192.168.1.136 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:30:53,894 - ALERT - IP: 192.168.1.169 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:54,929 - ALERT - IP: 192.168.1.85 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:30:55,965 - ALERT - IP: 192.168.1.34 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:56,999 - ALERT - IP: 192.168.1.43 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:58,036 - ALERT - IP: 192.168.1.6 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:30:59,070 - ALERT - IP: 192.168.1.214 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:00,108 - ALERT - IP: 192.168.1.222 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:01,144 - ALERT - IP: 192.168.1.99 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:02,192 - ALERT - IP: 192.168.1.13 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:03,226 - ALERT - IP: 192.168.1.252 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:04,265 - ALERT - IP: 192.168.1.113 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:05,300 - ALERT - IP: 192.168.1.138 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:06,335 - ALERT - IP: 192.168.1.195 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:07,371 - ALERT - IP: 192.168.1.249 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:08,414 - ALERT - IP: 192.168.1.1 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:09,455 - ALERT - IP: 192.168.1.245 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:10,505 - ALERT - IP: 192.168.1.166 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:11,543 - ALERT - IP: 192.168.1.45 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:12,580 - ALERT - IP: 192.168.1.30 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:13,618 - ALERT - IP: 192.168.1.161 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:14,654 - ALERT - IP: 192.168.1.222 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:15,692 - ALERT - IP: 192.168.1.87 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:16,728 - ALERT - IP: 192.168.1.65 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:17,770 - ALERT - IP: 192.168.1.35 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:18,813 - ALERT - IP: 192.168.1.93 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:19,850 - ALERT - IP: 192.168.1.149 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:20,906 - ALERT - IP: 192.168.1.139 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:21,944 - ALERT - IP: 192.168.1.113 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:22,985 - ALERT - IP: 192.168.1.45 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:24,027 - ALERT - IP: 192.168.1.228 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:25,061 - ALERT - IP: 192.168.1.25 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:26,100 - ALERT - IP: 192.168.1.28 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:27,135 - ALERT - IP: 192.168.1.103 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:28,173 - ALERT - IP: 192.168.1.131 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:29,212 - ALERT - IP: 192.168.1.103 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:30,248 - ALERT - IP: 192.168.1.38 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:31,283 - ALERT - IP: 192.168.1.183 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:32,319 - ALERT - IP: 192.168.1.106 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:33,365 - ALERT - IP: 192.168.1.73 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:34,401 - ALERT - IP: 192.168.1.125 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:35,437 - ALERT - IP: 192.168.1.82 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:36,480 - ALERT - IP: 192.168.1.94 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:37,517 - ALERT - IP: 192.168.1.18 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:38,563 - ALERT - IP: 192.168.1.100 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:39,684 - ALERT - IP: 192.168.1.250 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:40,721 - ALERT - IP: 192.168.1.6 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:41,755 - ALERT - IP: 192.168.1.192 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:42,789 - ALERT - IP: 192.168.1.235 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:43,826 - ALERT - IP: 192.168.1.104 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:44,862 - ALERT - IP: 192.168.1.52 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:45,897 - ALERT - IP: 192.168.1.222 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:46,934 - ALERT - IP: 192.168.1.197 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:47,971 - ALERT - IP: 192.168.1.10 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:49,028 - ALERT - IP: 192.168.1.212 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:50,065 - ALERT - IP: 192.168.1.133 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:51,102 - ALERT - IP: 192.168.1.135 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:31:52,142 - ALERT - IP: 192.168.1.220 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:53,176 - ALERT - IP: 192.168.1.205 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:54,211 - ALERT - IP: 192.168.1.61 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:31:55,249 - ALERT - IP: 192.168.1.61 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:56,287 - ALERT - IP: 192.168.1.7 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:57,335 - ALERT - IP: 192.168.1.123 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:31:58,379 - ALERT - IP: 192.168.1.163 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:31:59,434 - ALERT - IP: 192.168.1.89 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:00,471 - ALERT - IP: 192.168.1.23 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:01,512 - ALERT - IP: 192.168.1.183 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:02,556 - ALERT - IP: 192.168.1.44 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:03,601 - ALERT - IP: 192.168.1.206 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:04,636 - ALERT - IP: 192.168.1.73 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:05,681 - ALERT - IP: 192.168.1.59 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:06,720 - ALERT - IP: 192.168.1.78 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:07,759 - ALERT - IP: 192.168.1.232 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:08,795 - ALERT - IP: 192.168.1.175 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:09,831 - ALERT - IP: 192.168.1.135 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:10,879 - ALERT - IP: 192.168.1.11 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:11,921 - ALERT - IP: 192.168.1.227 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:12,957 - ALERT - IP: 192.168.1.204 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:13,991 - ALERT - IP: 192.168.1.127 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:15,030 - ALERT - IP: 192.168.1.73 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:16,067 - ALERT - IP: 192.168.1.38 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:17,102 - ALERT - IP: 192.168.1.197 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:18,136 - ALERT - IP: 192.168.1.79 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:19,172 - ALERT - IP: 192.168.1.151 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:20,209 - ALERT - IP: 192.168.1.90 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:21,244 - ALERT - IP: 192.168.1.12 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:22,294 - ALERT - IP: 192.168.1.213 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:23,334 - ALERT - IP: 192.168.1.204 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:24,370 - ALERT - IP: 192.168.1.246 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:25,409 - ALERT - IP: 192.168.1.201 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:26,448 - ALERT - IP: 192.168.1.45 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:27,492 - ALERT - IP: 192.168.1.28 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:28,555 - ALERT - IP: 192.168.1.64 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:29,607 - ALERT - IP: 192.168.1.168 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:30,645 - ALERT - IP: 192.168.1.21 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:31,697 - ALERT - IP: 192.168.1.47 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:32,734 - ALERT - IP: 192.168.1.88 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:33,772 - ALERT - IP: 192.168.1.231 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:34,808 - ALERT - IP: 192.168.1.58 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:35,852 - ALERT - IP: 192.168.1.75 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:36,895 - ALERT - IP: 192.168.1.19 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:37,931 - ALERT - IP: 192.168.1.170 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:38,968 - ALERT - IP: 192.168.1.187 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:40,011 - ALERT - IP: 192.168.1.208 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:41,048 - ALERT - IP: 192.168.1.158 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:42,093 - ALERT - IP: 192.168.1.144 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:43,133 - ALERT - IP: 192.168.1.112 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:44,170 - ALERT - IP: 192.168.1.22 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:45,208 - ALERT - IP: 192.168.1.113 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:46,241 - ALERT - IP: 192.168.1.211 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:47,280 - ALERT - IP: 192.168.1.252 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:48,320 - ALERT - IP: 192.168.1.67 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:49,361 - ALERT - IP: 192.168.1.29 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:50,401 - ALERT - IP: 192.168.1.235 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:51,441 - ALERT - IP: 192.168.1.208 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:52,477 - ALERT - IP: 192.168.1.184 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:53,512 - ALERT - IP: 192.168.1.138 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:32:54,550 - ALERT - IP: 192.168.1.128 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:55,584 - ALERT - IP: 192.168.1.254 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:56,620 - ALERT - IP: 192.168.1.107 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:32:57,661 - ALERT - IP: 192.168.1.141 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:32:58,702 - ALERT - IP: 192.168.1.89 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:32:59,739 - ALERT - IP: 192.168.1.238 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:00,775 - ALERT - IP: 192.168.1.232 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:01,842 - ALERT - IP: 192.168.1.32 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:02,880 - ALERT - IP: 192.168.1.226 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:03,926 - ALERT - IP: 192.168.1.190 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:04,967 - ALERT - IP: 192.168.1.46 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:33:06,029 - ALERT - IP: 192.168.1.197 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:07,100 - ALERT - IP: 192.168.1.79 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:08,148 - ALERT - IP: 192.168.1.114 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:33:09,188 - ALERT - IP: 192.168.1.224 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:10,229 - ALERT - IP: 192.168.1.120 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:11,269 - ALERT - IP: 192.168.1.93 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:12,305 - ALERT - IP: 192.168.1.203 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:13,346 - ALERT - IP: 192.168.1.73 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:14,379 - ALERT - IP: 192.168.1.238 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:15,415 - ALERT - IP: 192.168.1.240 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:16,457 - ALERT - IP: 192.168.1.212 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:17,492 - ALERT - IP: 192.168.1.235 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:18,530 - ALERT - IP: 192.168.1.222 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:19,569 - ALERT - IP: 192.168.1.125 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:20,609 - ALERT - IP: 192.168.1.30 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:21,651 - ALERT - IP: 192.168.1.103 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:22,689 - ALERT - IP: 192.168.1.7 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:23,729 - ALERT - IP: 192.168.1.195 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:24,772 - ALERT - IP: 192.168.1.156 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:25,814 - ALERT - IP: 192.168.1.208 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:26,859 - ALERT - IP: 192.168.1.60 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:33:27,933 - ALERT - IP: 192.168.1.195 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:28,985 - ALERT - IP: 192.168.1.175 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:30,029 - ALERT - IP: 192.168.1.27 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:31,068 - ALERT - IP: 192.168.1.163 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:32,112 - ALERT - IP: 192.168.1.21 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:33,158 - ALERT - IP: 192.168.1.59 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:34,198 - ALERT - IP: 192.168.1.197 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:35,242 - ALERT - IP: 192.168.1.173 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:36,280 - ALERT - IP: 192.168.1.222 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:37,322 - ALERT - IP: 192.168.1.185 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:38,365 - ALERT - IP: 192.168.1.215 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:33:39,407 - ALERT - IP: 192.168.1.28 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:40,446 - ALERT - IP: 192.168.1.147 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:41,486 - ALERT - IP: 192.168.1.172 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:42,541 - ALERT - IP: 192.168.1.91 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:43,579 - ALERT - IP: 192.168.1.29 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:33:44,631 - ALERT - IP: 192.168.1.27 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:45,669 - ALERT - IP: 192.168.1.249 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:46,711 - ALERT - IP: 192.168.1.36 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:33:47,752 - ALERT - IP: 192.168.1.107 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:48,794 - ALERT - IP: 192.168.1.115 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:49,840 - ALERT - IP: 192.168.1.81 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:50,881 - ALERT - IP: 192.168.1.182 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:51,925 - ALERT - IP: 192.168.1.83 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:52,968 - ALERT - IP: 192.168.1.22 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:54,010 - ALERT - IP: 192.168.1.142 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:33:55,051 - ALERT - IP: 192.168.1.191 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:56,089 - ALERT - IP: 192.168.1.5 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:57,127 - ALERT - IP: 192.168.1.56 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:33:58,170 - ALERT - IP: 192.168.1.82 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:33:59,205 - ALERT - IP: 192.168.1.41 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:00,249 - ALERT - IP: 192.168.1.81 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:01,287 - ALERT - IP: 192.168.1.224 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:02,329 - ALERT - IP: 192.168.1.43 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:03,366 - ALERT - IP: 192.168.1.214 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:04,411 - ALERT - IP: 192.168.1.133 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:05,456 - ALERT - IP: 192.168.1.239 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:06,504 - ALERT - IP: 192.168.1.40 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:07,545 - ALERT - IP: 192.168.1.83 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:08,588 - ALERT - IP: 192.168.1.63 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:09,631 - ALERT - IP: 192.168.1.222 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:10,670 - ALERT - IP: 192.168.1.194 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:11,714 - ALERT - IP: 192.168.1.7 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:12,755 - ALERT - IP: 192.168.1.230 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:13,792 - ALERT - IP: 192.168.1.55 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:14,830 - ALERT - IP: 192.168.1.76 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:15,866 - ALERT - IP: 192.168.1.23 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:16,909 - ALERT - IP: 192.168.1.77 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:17,948 - ALERT - IP: 192.168.1.30 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:18,989 - ALERT - IP: 192.168.1.205 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:20,025 - ALERT - IP: 192.168.1.192 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:21,078 - ALERT - IP: 192.168.1.114 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:22,122 - ALERT - IP: 192.168.1.167 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:23,178 - ALERT - IP: 192.168.1.237 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:24,214 - ALERT - IP: 192.168.1.72 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:25,255 - ALERT - IP: 192.168.1.173 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:26,292 - ALERT - IP: 192.168.1.28 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:27,332 - ALERT - IP: 192.168.1.115 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:28,370 - ALERT - IP: 192.168.1.129 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:29,404 - ALERT - IP: 192.168.1.30 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:30,441 - ALERT - IP: 192.168.1.245 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:31,475 - ALERT - IP: 192.168.1.93 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:32,514 - ALERT - IP: 192.168.1.42 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:33,550 - ALERT - IP: 192.168.1.81 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:34,585 - ALERT - IP: 192.168.1.10 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:35,619 - ALERT - IP: 192.168.1.11 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:36,657 - ALERT - IP: 192.168.1.59 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:37,699 - ALERT - IP: 192.168.1.51 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:38,735 - ALERT - IP: 192.168.1.93 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:39,770 - ALERT - IP: 192.168.1.148 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:40,805 - ALERT - IP: 192.168.1.189 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:41,843 - ALERT - IP: 192.168.1.191 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:42,879 - ALERT - IP: 192.168.1.208 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:43,914 - ALERT - IP: 192.168.1.242 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:44,948 - ALERT - IP: 192.168.1.92 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:45,984 - ALERT - IP: 192.168.1.77 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:47,022 - ALERT - IP: 192.168.1.112 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:48,057 - ALERT - IP: 192.168.1.145 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:49,091 - ALERT - IP: 192.168.1.58 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:50,128 - ALERT - IP: 192.168.1.165 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:51,163 - ALERT - IP: 192.168.1.129 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:52,199 - ALERT - IP: 192.168.1.4 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:53,233 - ALERT - IP: 192.168.1.209 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:54,270 - ALERT - IP: 192.168.1.204 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:55,309 - ALERT - IP: 192.168.1.121 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:34:56,346 - ALERT - IP: 192.168.1.93 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:34:57,388 - ALERT - IP: 192.168.1.201 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:34:58,425 - ALERT - IP: 192.168.1.17 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:34:59,468 - ALERT - IP: 192.168.1.166 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:00,505 - ALERT - IP: 192.168.1.135 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:01,558 - ALERT - IP: 192.168.1.111 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:02,596 - ALERT - IP: 192.168.1.79 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:03,635 - ALERT - IP: 192.168.1.212 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:04,671 - ALERT - IP: 192.168.1.202 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:05,707 - ALERT - IP: 192.168.1.190 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:06,750 - ALERT - IP: 192.168.1.223 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:07,787 - ALERT - IP: 192.168.1.103 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:08,824 - ALERT - IP: 192.168.1.142 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:09,859 - ALERT - IP: 192.168.1.162 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:10,894 - ALERT - IP: 192.168.1.65 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:11,928 - ALERT - IP: 192.168.1.98 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:12,964 - ALERT - IP: 192.168.1.156 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:13,999 - ALERT - IP: 192.168.1.224 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:15,035 - ALERT - IP: 192.168.1.236 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:16,070 - ALERT - IP: 192.168.1.250 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:17,106 - ALERT - IP: 192.168.1.119 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:18,140 - ALERT - IP: 192.168.1.196 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:19,175 - ALERT - IP: 192.168.1.49 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:20,212 - ALERT - IP: 192.168.1.59 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:21,248 - ALERT - IP: 192.168.1.155 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:22,284 - ALERT - IP: 192.168.1.189 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:23,319 - ALERT - IP: 192.168.1.143 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:24,355 - ALERT - IP: 192.168.1.3 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:25,391 - ALERT - IP: 192.168.1.230 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:26,428 - ALERT - IP: 192.168.1.102 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:27,463 - ALERT - IP: 192.168.1.239 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:28,501 - ALERT - IP: 192.168.1.106 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:29,537 - ALERT - IP: 192.168.1.213 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:30,574 - ALERT - IP: 192.168.1.238 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:31,609 - ALERT - IP: 192.168.1.225 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:32,645 - ALERT - IP: 192.168.1.84 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:33,684 - ALERT - IP: 192.168.1.226 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:34,721 - ALERT - IP: 192.168.1.35 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:35,773 - ALERT - IP: 192.168.1.249 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:36,820 - ALERT - IP: 192.168.1.186 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:37,867 - ALERT - IP: 192.168.1.113 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:38,917 - ALERT - IP: 192.168.1.16 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:39,964 - ALERT - IP: 192.168.1.144 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:35:41,012 - ALERT - IP: 192.168.1.135 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:42,047 - ALERT - IP: 192.168.1.28 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:43,084 - ALERT - IP: 192.168.1.185 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:44,120 - ALERT - IP: 192.168.1.124 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:45,157 - ALERT - IP: 192.168.1.137 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:46,190 - ALERT - IP: 192.168.1.206 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:47,228 - ALERT - IP: 192.168.1.178 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:48,262 - ALERT - IP: 192.168.1.181 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:49,299 - ALERT - IP: 192.168.1.48 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:50,332 - ALERT - IP: 192.168.1.237 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:51,368 - ALERT - IP: 192.168.1.44 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:52,403 - ALERT - IP: 192.168.1.22 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:53,439 - ALERT - IP: 192.168.1.171 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:54,474 - ALERT - IP: 192.168.1.89 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:55,510 - ALERT - IP: 192.168.1.37 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:56,545 - ALERT - IP: 192.168.1.171 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:35:57,581 - ALERT - IP: 192.168.1.10 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:35:58,616 - ALERT - IP: 192.168.1.248 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:35:59,654 - ALERT - IP: 192.168.1.118 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:00,688 - ALERT - IP: 192.168.1.132 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:01,722 - ALERT - IP: 192.168.1.70 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:02,756 - ALERT - IP: 192.168.1.22 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:03,792 - ALERT - IP: 192.168.1.84 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:04,832 - ALERT - IP: 192.168.1.19 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:05,876 - ALERT - IP: 192.168.1.120 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:06,917 - ALERT - IP: 192.168.1.12 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:07,959 - ALERT - IP: 192.168.1.43 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:08,995 - ALERT - IP: 192.168.1.79 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:10,031 - ALERT - IP: 192.168.1.18 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:11,068 - ALERT - IP: 192.168.1.252 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:12,104 - ALERT - IP: 192.168.1.20 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:13,141 - ALERT - IP: 192.168.1.14 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:36:14,185 - ALERT - IP: 192.168.1.189 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:15,222 - ALERT - IP: 192.168.1.235 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:16,264 - ALERT - IP: 192.168.1.7 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:17,304 - ALERT - IP: 192.168.1.6 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:18,341 - ALERT - IP: 192.168.1.89 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:19,377 - ALERT - IP: 192.168.1.179 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:20,412 - ALERT - IP: 192.168.1.23 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:21,448 - ALERT - IP: 192.168.1.3 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:22,486 - ALERT - IP: 192.168.1.192 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:23,523 - ALERT - IP: 192.168.1.24 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:24,557 - ALERT - IP: 192.168.1.253 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:25,595 - ALERT - IP: 192.168.1.152 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:26,631 - ALERT - IP: 192.168.1.253 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:27,667 - ALERT - IP: 192.168.1.208 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:36:28,700 - ALERT - IP: 192.168.1.127 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:29,739 - ALERT - IP: 192.168.1.13 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:30,773 - ALERT - IP: 192.168.1.12 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:31,810 - ALERT - IP: 192.168.1.170 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:32,846 - ALERT - IP: 192.168.1.159 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:33,881 - ALERT - IP: 192.168.1.173 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:34,917 - ALERT - IP: 192.168.1.166 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:35,958 - ALERT - IP: 192.168.1.237 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:37,000 - ALERT - IP: 192.168.1.190 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:38,039 - ALERT - IP: 192.168.1.169 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:36:39,073 - ALERT - IP: 192.168.1.122 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:36:40,113 - ALERT - IP: 192.168.1.211 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:41,152 - ALERT - IP: 192.168.1.250 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:42,193 - ALERT - IP: 192.168.1.176 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:43,230 - ALERT - IP: 192.168.1.151 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:44,271 - ALERT - IP: 192.168.1.192 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:45,319 - ALERT - IP: 192.168.1.71 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:46,356 - ALERT - IP: 192.168.1.115 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:47,402 - ALERT - IP: 192.168.1.160 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:48,444 - ALERT - IP: 192.168.1.71 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:49,486 - ALERT - IP: 192.168.1.107 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:50,531 - ALERT - IP: 192.168.1.184 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:51,573 - ALERT - IP: 192.168.1.18 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:52,629 - ALERT - IP: 192.168.1.105 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:36:53,670 - ALERT - IP: 192.168.1.200 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:36:54,709 - ALERT - IP: 192.168.1.156 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:55,745 - ALERT - IP: 192.168.1.212 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:56,779 - ALERT - IP: 192.168.1.39 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:36:57,820 - ALERT - IP: 192.168.1.153 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:36:58,862 - ALERT - IP: 192.168.1.1 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:36:59,906 - ALERT - IP: 192.168.1.137 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:00,949 - ALERT - IP: 192.168.1.18 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:01,984 - ALERT - IP: 192.168.1.50 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:03,022 - ALERT - IP: 192.168.1.132 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:04,059 - ALERT - IP: 192.168.1.251 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:05,094 - ALERT - IP: 192.168.1.73 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:06,137 - ALERT - IP: 192.168.1.195 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:07,199 - ALERT - IP: 192.168.1.38 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:08,241 - ALERT - IP: 192.168.1.250 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:09,284 - ALERT - IP: 192.168.1.70 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:10,322 - ALERT - IP: 192.168.1.68 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:11,358 - ALERT - IP: 192.168.1.168 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:12,399 - ALERT - IP: 192.168.1.155 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:13,434 - ALERT - IP: 192.168.1.109 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:14,475 - ALERT - IP: 192.168.1.164 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:15,511 - ALERT - IP: 192.168.1.184 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:16,547 - ALERT - IP: 192.168.1.207 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:17,590 - ALERT - IP: 192.168.1.204 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:18,628 - ALERT - IP: 192.168.1.46 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:19,663 - ALERT - IP: 192.168.1.150 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:20,703 - ALERT - IP: 192.168.1.93 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:21,739 - ALERT - IP: 192.168.1.46 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:22,777 - ALERT - IP: 192.168.1.1 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:23,817 - ALERT - IP: 192.168.1.63 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:24,865 - ALERT - IP: 192.168.1.94 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:25,903 - ALERT - IP: 192.168.1.6 | Attack: Web Attack | MITRE: Initial Access(T1190) | Action: Block request
+2026-04-17 11:37:26,967 - ALERT - IP: 192.168.1.231 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:28,007 - ALERT - IP: 192.168.1.210 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:29,044 - ALERT - IP: 192.168.1.23 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:30,086 - ALERT - IP: 192.168.1.226 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:31,121 - ALERT - IP: 192.168.1.64 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:32,160 - ALERT - IP: 192.168.1.68 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:33,206 - ALERT - IP: 192.168.1.214 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:34,250 - ALERT - IP: 192.168.1.46 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:35,289 - ALERT - IP: 192.168.1.209 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:36,330 - ALERT - IP: 192.168.1.228 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:37,372 - ALERT - IP: 192.168.1.137 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:38,416 - ALERT - IP: 192.168.1.84 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:39,459 - ALERT - IP: 192.168.1.62 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:40,494 - ALERT - IP: 192.168.1.225 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:41,529 - ALERT - IP: 192.168.1.153 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:42,566 - ALERT - IP: 192.168.1.180 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:43,608 - ALERT - IP: 192.168.1.249 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:44,652 - ALERT - IP: 192.168.1.41 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:45,693 - ALERT - IP: 192.168.1.44 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:46,727 - ALERT - IP: 192.168.1.15 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:37:47,764 - ALERT - IP: 192.168.1.76 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:48,799 - ALERT - IP: 192.168.1.90 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:49,837 - ALERT - IP: 192.168.1.21 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:50,876 - ALERT - IP: 192.168.1.44 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:51,912 - ALERT - IP: 192.168.1.111 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:52,952 - ALERT - IP: 192.168.1.219 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:53,991 - ALERT - IP: 192.168.1.159 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:55,031 - ALERT - IP: 192.168.1.132 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:37:56,073 - ALERT - IP: 192.168.1.59 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:57,116 - ALERT - IP: 192.168.1.53 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:37:58,159 - ALERT - IP: 192.168.1.66 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:37:59,206 - ALERT - IP: 192.168.1.251 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:00,243 - ALERT - IP: 192.168.1.141 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:01,293 - ALERT - IP: 192.168.1.230 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:02,331 - ALERT - IP: 192.168.1.15 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:03,373 - ALERT - IP: 192.168.1.184 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:04,417 - ALERT - IP: 192.168.1.138 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:05,461 - ALERT - IP: 192.168.1.14 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:06,506 - ALERT - IP: 192.168.1.253 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:07,541 - ALERT - IP: 192.168.1.211 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:08,580 - ALERT - IP: 192.168.1.186 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:09,623 - ALERT - IP: 192.168.1.65 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:10,659 - ALERT - IP: 192.168.1.11 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:11,696 - ALERT - IP: 192.168.1.54 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:12,746 - ALERT - IP: 192.168.1.175 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:13,787 - ALERT - IP: 192.168.1.152 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:14,831 - ALERT - IP: 192.168.1.75 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:15,894 - ALERT - IP: 192.168.1.188 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:16,931 - ALERT - IP: 192.168.1.252 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:17,969 - ALERT - IP: 192.168.1.96 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:19,011 - ALERT - IP: 192.168.1.28 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:20,046 - ALERT - IP: 192.168.1.250 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:21,090 - ALERT - IP: 192.168.1.110 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:22,127 - ALERT - IP: 192.168.1.142 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:23,165 - ALERT - IP: 192.168.1.28 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:24,202 - ALERT - IP: 192.168.1.136 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:25,248 - ALERT - IP: 192.168.1.116 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:26,285 - ALERT - IP: 192.168.1.56 | Attack: Web Attack | MITRE: Initial Access(T1190) | Action: Block request
+2026-04-17 11:38:27,320 - ALERT - IP: 192.168.1.10 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:28,356 - ALERT - IP: 192.168.1.177 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:29,391 - ALERT - IP: 192.168.1.199 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:30,428 - ALERT - IP: 192.168.1.219 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:31,463 - ALERT - IP: 192.168.1.135 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:32,499 - ALERT - IP: 192.168.1.2 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:33,536 - ALERT - IP: 192.168.1.73 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:34,572 - ALERT - IP: 192.168.1.35 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:35,613 - ALERT - IP: 192.168.1.8 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:36,650 - ALERT - IP: 192.168.1.16 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:37,710 - ALERT - IP: 192.168.1.37 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:38,747 - ALERT - IP: 192.168.1.24 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:39,782 - ALERT - IP: 192.168.1.202 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:40,821 - ALERT - IP: 192.168.1.74 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:41,859 - ALERT - IP: 192.168.1.209 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:42,897 - ALERT - IP: 192.168.1.160 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:43,935 - ALERT - IP: 192.168.1.142 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:44,973 - ALERT - IP: 192.168.1.59 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:46,011 - ALERT - IP: 192.168.1.106 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:47,051 - ALERT - IP: 192.168.1.41 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:48,087 - ALERT - IP: 192.168.1.134 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:49,125 - ALERT - IP: 192.168.1.142 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:38:50,160 - ALERT - IP: 192.168.1.3 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:51,199 - ALERT - IP: 192.168.1.67 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:52,236 - ALERT - IP: 192.168.1.59 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:53,272 - ALERT - IP: 192.168.1.11 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:38:54,318 - ALERT - IP: 192.168.1.27 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:55,353 - ALERT - IP: 192.168.1.205 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:56,389 - ALERT - IP: 192.168.1.178 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:57,423 - ALERT - IP: 192.168.1.98 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:38:58,459 - ALERT - IP: 192.168.1.71 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:38:59,495 - ALERT - IP: 192.168.1.129 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:00,536 - ALERT - IP: 192.168.1.151 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:01,573 - ALERT - IP: 192.168.1.226 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:02,611 - ALERT - IP: 192.168.1.3 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:03,649 - ALERT - IP: 192.168.1.112 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:04,687 - ALERT - IP: 192.168.1.185 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:05,723 - ALERT - IP: 192.168.1.233 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:06,767 - ALERT - IP: 192.168.1.179 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:07,808 - ALERT - IP: 192.168.1.2 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:08,844 - ALERT - IP: 192.168.1.230 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:09,902 - ALERT - IP: 192.168.1.175 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:10,940 - ALERT - IP: 192.168.1.250 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:11,978 - ALERT - IP: 192.168.1.216 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:13,015 - ALERT - IP: 192.168.1.128 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:14,051 - ALERT - IP: 192.168.1.252 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:15,088 - ALERT - IP: 192.168.1.146 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:16,129 - ALERT - IP: 192.168.1.202 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:17,172 - ALERT - IP: 192.168.1.211 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:18,207 - ALERT - IP: 192.168.1.128 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:39:19,245 - ALERT - IP: 192.168.1.147 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:20,280 - ALERT - IP: 192.168.1.164 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:21,318 - ALERT - IP: 192.168.1.65 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:22,356 - ALERT - IP: 192.168.1.224 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:23,393 - ALERT - IP: 192.168.1.209 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:24,432 - ALERT - IP: 192.168.1.207 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:25,473 - ALERT - IP: 192.168.1.203 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:39:26,509 - ALERT - IP: 192.168.1.174 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:27,568 - ALERT - IP: 192.168.1.21 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:28,607 - ALERT - IP: 192.168.1.80 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:29,643 - ALERT - IP: 192.168.1.122 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:30,679 - ALERT - IP: 192.168.1.8 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:31,712 - ALERT - IP: 192.168.1.161 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:32,746 - ALERT - IP: 192.168.1.175 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:33,781 - ALERT - IP: 192.168.1.80 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:34,814 - ALERT - IP: 192.168.1.184 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:35,850 - ALERT - IP: 192.168.1.251 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:36,885 - ALERT - IP: 192.168.1.121 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:39:37,921 - ALERT - IP: 192.168.1.186 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:38,955 - ALERT - IP: 192.168.1.153 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:39,990 - ALERT - IP: 192.168.1.213 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:41,024 - ALERT - IP: 192.168.1.247 | Attack: Normal | MITRE: None(None) | Action: Allow
+2026-04-17 11:39:42,058 - ALERT - IP: 192.168.1.170 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:43,092 - ALERT - IP: 192.168.1.94 | Attack: Brute Force | MITRE: Credential Access(T1110) | Action: Block IP
+2026-04-17 11:39:44,126 - ALERT - IP: 192.168.1.174 | Attack: Port Scan | MITRE: Reconnaissance(T1046) | Action: Close port
+2026-04-17 11:39:45,160 - ALERT - IP: 192.168.1.156 | Attack: DoS | MITRE: Impact(T1499) | Action: Drop traffic
+2026-04-17 11:39:46,194 - ALERT - IP: 192.168.1.167 | Attack: Normal | MITRE: None(None) | Action: Allow
