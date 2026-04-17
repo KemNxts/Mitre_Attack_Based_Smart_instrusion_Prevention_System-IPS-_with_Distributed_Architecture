@@ -5,3 +5,5 @@ scikit-learn
 joblib
 streamlit
 requests
+plotly
+flask-limiter

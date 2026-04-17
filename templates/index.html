@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attacker Control Panel | Smart IPS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .target-config {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+        }
+        .config-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .target-config input[type="text"], .target-config input[type="number"] {
+            background: #000;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+        .target-config input[type="text"] { width: 180px; }
+        .target-config input[type="number"] { width: 60px; }
+        
+        .target-config label {
+            font-weight: bold;
+            color: var(--accent-red);
+            font-size: 0.9rem;
+        }
+        .bot-mode-active {
+            color: var(--accent-green) !important;
+            text-shadow: 0 0 5px var(--accent-green);
+        }
+        .ip-error {
+            color: var(--accent-red);
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none;
+        }
+        #active-bots-display {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            border: 1px dashed #444;
+            display: none;
+        }
+        .ip-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        .ip-tag {
+            background: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Attacker Control Panel</h1>
+            <p class="subtitle">Distributed IDS/IPS Stress Testing Interface (V2 Bot-Enabled)</p>
+        </header>
+
+        <!-- Target Configuration -->
+        <div class="target-config">
+            <div class="config-group">
+                <label for="target-ip">Target IP:</label>
+                <input type="text" id="target-ip" value="127.0.0.1" placeholder="e.g. 192.168.1.10">
+            </div>
+            
+            <div class="config-group">
+                <input type="checkbox" id="bot-mode" onclick="toggleBotDisplay()">
+                <label for="bot-mode" id="bot-label">Bot Mode (Multi-IP)</label>
+            </div>
+            
+            <div class="config-group" id="bot-count-group" style="display:none;">
+                <label for="bot-count">Bots:</label>
+                <input type="number" id="bot-count" value="5" min="1" max="50">
+            </div>
+
+            <div id="ip-error-msg" class="ip-error" style="width: 100%; text-align: center;">
+                Only local IPs allowed (127.0.0.1, 192.168.x.x)
+            </div>
+        </div>
+
+        <div id="active-bots-display">
+            <div style="font-weight: bold; margin-bottom: 5px;">🤖 Active Bot Network Status</div>
+            <div id="bot-summary">0 bots active from individual 192.168.1.x addresses</div>
+            <div class="ip-list" id="active-ips-list">
+                <!-- IP Tags will be inserted here -->
+            </div>
+        </div>
+
+        <div class="attack-grid" style="margin-top: 20px;">
+            <!-- Attack Cards -->
+            {% for id, title, desc in [
+                ('bruteforce', '🔐 Brute Force', 'Credential testing against the login server. (Single IP only)'),
+                ('dos', '🌊 DoS Flood', 'Multi-IP request flooding to overwhelm targeting service.'),
+                ('portscan', '🔍 Port Scan', 'Rapid socket probing using rotated source IPs.'),
+                ('bot', '🤖 Bot Behavior', 'Simulate a persistent botnet with unique source trails.'),
+                ('web', '💉 Web Attack', 'Distributed SQL Injection payloads from multiple sources.')
+            ] %}
+            <div class="attack-card" id="{{id}}-card">
+                <span class="status-badge" id="{{id}}-status-badge">Idle</span>
+                <h3>{{title}}</h3>
+                <p>{{desc}}</p>
+                <div class="btn-container">
+                    <button class="btn-launch" onclick="startAttack('{{id}}')">Launch</button>
+                    <button class="btn-stop" onclick="stopAttack('{{id}}')">Stop</button>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div id="log-container">
+            <h3>📡 Real-time Attack Logs</h3>
+            <div id="logs">
+                [SYSTEM] Central Command Ready...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleBotDisplay() {
+            const isBot = document.getElementById('bot-mode').checked;
+            document.getElementById('bot-count-group').style.display = isBot ? 'flex' : 'none';
+            document.getElementById('bot-label').className = isBot ? 'bot-mode-active' : '';
+        }
+
+        function validateIP(ip) {
+            if (ip.toLowerCase() === 'localhost') return true;
+            return /^(127\.0\.0\.1|192\.168\.\d{1,3}\.\d{1,3})$/.test(ip);
+        }
+
+        function updateStatus() {
+            fetch('/status')
+                .then(r => r.json())
+                .then(data => {
+                    let totalRunning = 0;
+                    Object.keys(data).forEach(attack => {
+                        const badge = document.getElementById(`${attack}-status-badge`);
+                        const launchBtn = document.querySelector(`#${attack}-card .btn-launch`);
+                        const stopBtn = document.querySelector(`#${attack}-card .btn-stop`);
+                        
+                        if (data[attack].status === 'running') {
+                            totalRunning++;
+                            badge.textContent = 'Running';
+                            badge.className = 'status-badge status-running';
+                            launchBtn.disabled = true;
+                            stopBtn.disabled = false;
+                        } else {
+                            badge.textContent = 'Idle';
+                            badge.className = 'status-badge status-idle';
+                            launchBtn.disabled = false;
+                            stopBtn.disabled = true;
+                        }
+                    });
+
+                    // Update Bot Display
+                    const activeBotsDiv = document.getElementById('active-bots-display');
+                    if (totalRunning > 0) {
+                        activeBotsDiv.style.display = 'block';
+                        // Fetch active IPs if running
+                        fetch('/active-ips')
+                            .then(r => r.json())
+                            .then(ips => {
+                                const list = document.getElementById('active-ips-list');
+                                list.innerHTML = '';
+                                ips.forEach(ip => {
+                                    list.innerHTML += `<span class="ip-tag">${ip}</span>`;
+                                });
+                                document.getElementById('bot-summary').textContent = `${ips.length} unique source IPs detected in simulation trail.`;
+                            });
+                    } else {
+                        activeBotsDiv.style.display = 'none';
+                    }
+                });
+        }
+
+        function addLog(msg) {
+            const logs = document.getElementById('logs');
+            const time = new Date().toLocaleTimeString();
+            logs.innerHTML += `<div>[${time}] ${msg}</div>`;
+            logs.scrollTop = logs.scrollHeight;
+        }
+
+        function startAttack(type) {
+            const ip = document.getElementById('target-ip').value.trim();
+            const botMode = document.getElementById('bot-mode').checked;
+            const botCount = document.getElementById('bot-count').value;
+
+            if (!validateIP(ip)) {
+                document.getElementById('ip-error-msg').style.display = 'block';
+                return;
+            }
+            document.getElementById('ip-error-msg').style.display = 'none';
+
+            addLog(`Launching ${type} attack (Target: ${ip}, BotMode: ${botMode})...`);
+            
+            fetch(`/launch/${type}`, { 
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    target_ip: ip,
+                    bot_mode: botMode,
+                    bot_count: botCount
+                })
+            })
+            .then(r => r.json())
+            .then(data => {
+                addLog(data.message);
+                updateStatus();
+            });
+        }
+
+        function stopAttack(type) {
+            addLog(`Stopping ${type} attack...`);
+            fetch(`/stop/${type}`, { method: 'POST' })
+                .then(r => r.json())
+                .then(data => {
+                    addLog(data.message);
+                    updateStatus();
+                });
+        }
+
+        setInterval(updateStatus, 2000);
+    </script>
+</body>
+</html>

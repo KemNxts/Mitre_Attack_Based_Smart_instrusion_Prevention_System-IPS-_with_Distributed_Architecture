@@ -24,10 +24,19 @@ class IPSLogger:
         alert_handler.setFormatter(alert_formatter)
         self.alerts_logger.addHandler(alert_handler)
 
-    def log_system(self, message):
-        self.system_logger.info(message)
+    def log_system(self, message, level="INFO"):
+        if level == "WARNING":
+            self.system_logger.warning(message)
+        elif level == "ERROR":
+            self.system_logger.error(message)
+        else:
+            self.system_logger.info(message)
 
-    def log_alert(self, ip, attack, mitre, action):
-        message = f"IP: {ip} | Attack: {attack} | MITRE: {mitre['tactic']}({mitre['technique']}) | Action: {action}"
+    def log_alert(self, ip, attack, mitre, action, severity="Medium", confidence=1.0):
+        message = (
+            f"[{severity}] [Conf: {confidence:.2f}] "
+            f"IP: {ip} | Attack: {attack} | MITRE: {mitre['technique']} | Action: {action}"
+        )
         self.alerts_logger.warning(message)
+        print(f"🚨 ALERT: {message}")
         return message

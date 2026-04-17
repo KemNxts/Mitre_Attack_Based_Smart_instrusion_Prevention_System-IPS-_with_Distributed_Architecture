@@ -1,0 +1,148 @@
+:root {
+    --bg-dark: #0e1117;
+    --card-bg: #1a1e26;
+    --accent-red: #ff4b4b;
+    --accent-green: #4caf50;
+    --text-main: #e6edf3;
+    --text-dim: #8b949e;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--accent-red);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+}
+
+.attack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.attack-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.attack-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-red);
+}
+
+.attack-card h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.attack-card p {
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.status-idle { color: var(--text-dim); border: 1px solid var(--text-dim); }
+.status-running { 
+    color: var(--accent-green); 
+    border: 1px solid var(--accent-green);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-launch {
+    background-color: var(--accent-red);
+    color: white;
+}
+
+.btn-launch:hover { background-color: #d32f2f; }
+
+.btn-stop {
+    background-color: #444;
+    color: #ccc;
+}
+
+.btn-stop:hover { background-color: #666; }
+
+.btn-launch:disabled, .btn-stop:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#log-container {
+    margin-top: 50px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+#logs {
+    background: black;
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+    height: 200px;
+    overflow-y: auto;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}

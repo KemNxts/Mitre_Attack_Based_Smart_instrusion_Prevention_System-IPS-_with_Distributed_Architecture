@@ -70,7 +70,13 @@ def generate_traffic(attack_type):
 
 # Main loop
 def run_attacker():
-    print("🚀 Starting Attack Simulation...\n")
+    print("🚀 Starting General Attack Simulation (Background Noise)...")
+    print("💡 FOR SPECIALIZED ATTACKS, RUN:")
+    print("   - python bruteforce_attacker.py")
+    print("   - python dos_attacker.py")
+    print("   - python port_scan_attacker.py")
+    print("   - python bot_attacker.py")
+    print("   - python web_attacker.py\n")
 
     while True:
         attack_type = random.choice(ATTACK_TYPES)
