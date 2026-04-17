@@ -12,10 +12,11 @@ A professional-grade cybersecurity platform that implements a **Smart Intrusion 
 - **Strategic Rule Layer**: Immediate, high-precision detection for known malicious signatures (Brute Force, DoS, SQLi).
 - **Adaptive Mitigation**: Automated "Drop Traffic", "Account Lockout", and "IP Quarantine" responses.
 
-### 🎮 Web-Based Attacker Control Panel (V2)
+### 🎮 Web-Based Attacker Control Panel (V3 Bot-Enabled)
+- **Bot Mode (Multi-IP Simulation)**: Simulate distributed attacks (DDoS) from up to 50 unique virtual sources (`192.168.1.x`) simultaneously.
+- **Threaded Execution**: High-volume, concurrent attack vectors using Python-native threading for realistic stress-testing.
 - **Dynamic Targeting**: Specify any local network target (e.g., `192.168.x.x`) directly from the UI.
-- **Security Validation**: Built-in dual-layer IP filtering to ensure simulations stay within safe network boundaries (`localhost`, `127.0.0.1`, `192.168.0.0/16`).
-- **Process Management**: Real-time monitoring and termination of background attack scripts.
+- **Security Validation**: Built-in dual-layer IP filtering to ensure simulations stay within safe network boundaries.
 
 ### 🎯 MITRE ATT&CK Mapping
 Every detection is automatically mapped to professional tactics and techniques:
@@ -27,7 +28,7 @@ Every detection is automatically mapped to professional tactics and techniques:
 
 ### 📊 Real-Time Analytics Dashboard
 - **Plotly Visualizations**: Dynamic charts for severity distribution and attack frequency.
-- **Persistence Monitoring**: Tracks blocked sources even after high-severity intervention.
+- **Identity Tracking**: Monitor dozens of attacking IPs in real-time as the botnet scales.
 - **Modern UI**: Dark-mode glassmorphism theme with instant state updates.
 
 ---
@@ -59,20 +60,21 @@ Open a fourth terminal to access the central attack controller:
 python attacker_ui.py
 ```
 1. Visit `http://127.0.0.1:7000`.
-2. Enter your **Target IP** (e.g., `127.0.0.1` or `192.168.1.10`).
-3. Click **Launch Attack** on any vector.
+2. Configure your **Target IP**.
+3. Enable **Bot Mode** and set the number of virtual attackers.
+4. Click **Launch Attack** on any vector.
 
 ---
 
 ## 🔍 Attack Vector Mechanics
 
-| Vector | Script | Mitigation Logic |
+| Vector | Script | Bot Mode Logic |
 | :--- | :--- | :--- |
-| **Brute Force** | `bruteforce_attacker.py` | 5s lockout after 5 fails |
-| **DoS Flood** | `dos_attacker.py` | Rate-limiting & Socket drop |
-| **Port Scan** | `port_scan_attacker.py` | Source port closure |
-| **Web Attack** | `web_attacker.py` | WAF-style payload filtering |
-| **Botnet** | `bot_attacker.py` | Source quarantine |
+| **DoS Flood** | `dos_attacker.py` | Threaded multi-source flooding |
+| **Botnet** | `bot_attacker.py` | Concurrent multi-IP persistent traffic |
+| **Port Scan** | `port_scan_attacker.py` | IP identity rotation per port probe |
+| **Web Attack** | `web_attacker.py` | Distributed SQLi payloads |
+| **Brute Force** | `bruteforce_attacker.py` | Sequential single-source (Realism) |
 
 ---
 
@@ -87,10 +89,10 @@ python attacker_ui.py
 ├── mitre.py              # ATT&CK Framework Mappings
 ├── prevention.py         # Advanced Mitigation Rules
 ├── preprocess.py         # Feature Scaling & Encoding
-└── [Attacker Scripts]    # Dynamic Localized Threat Simulators
+└── [Attacker Scripts]    # Threaded multi-IP threat simulators
 ```
 
 ---
 
 ## ⚠️ Safety Disclaimer
-This system is intended for **research and educational purposes only**. All simulations are strictly restricted to local and private ranges (`127.0.0.1`, `localhost`, `192.168.x.x`). The Attacker UI will reject any attempts to target external or public IP addresses for security reasons.
+This system is intended for **research and educational purposes only**. The Attacker UI strictly enforces local network boundaries and will only simulate traffic against private IP ranges (`127.0.0.1`, `localhost`, `192.168.x.x`). Internal IP generation is purely virtual and does not involve real packet spoofing at the network level.

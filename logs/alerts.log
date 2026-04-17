@@ -21617,3 +21617,229 @@
 2026-04-17 16:05:20,551 - ALERT - [CRITICAL] [Conf: 0.99] IP: 10.0.0.5 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
 2026-04-17 16:05:20,553 - ALERT - [CRITICAL] [Conf: 0.99] IP: 10.0.0.5 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
 2026-04-17 16:05:20,557 - ALERT - [CRITICAL] [Conf: 0.99] IP: 10.0.0.5 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:21:32,019 - ALERT - [Medium] [Conf: 0.52] IP: 192.168.1.50 | Attack: Bot | MITRE: T1059 | Action: Monitor Context
+2026-04-17 16:21:32,605 - ALERT - [Medium] [Conf: 0.53] IP: 192.168.1.50 | Attack: Bot | MITRE: T1059 | Action: Monitor Context
+2026-04-17 16:21:33,158 - ALERT - [Medium] [Conf: 0.44] IP: 192.168.1.50 | Attack: Bot | MITRE: T1059 | Action: Monitor Context
+2026-04-17 16:21:33,716 - ALERT - [Medium] [Conf: 0.52] IP: 192.168.1.50 | Attack: Bot | MITRE: T1059 | Action: Monitor Context
+2026-04-17 16:21:34,232 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.50 | Attack: Brute Force | MITRE: T1110 | Action: Block IP & Lock Account
+2026-04-17 16:21:58,230 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:21:58,445 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:21:58,665 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:21:58,895 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:21:59,114 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:21:59,346 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:21:59,564 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:21:59,782 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:00,001 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:00,231 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:00,451 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:00,677 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:00,900 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:01,184 - ALERT - [Low] [Conf: 1.00] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:01,411 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:01,630 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:01,847 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:02,064 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:02,284 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:02,511 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:02,727 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:02,945 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:03,160 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:03,379 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:03,597 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:03,815 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:04,030 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:04,248 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:04,464 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:04,681 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:04,897 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:05,111 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:05,331 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:05,546 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:05,762 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:05,981 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:06,197 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:06,418 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:06,636 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:06,852 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:07,068 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:07,284 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:07,504 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:07,717 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:07,933 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:08,162 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:08,232 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.100 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:22:08,236 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.100 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:22:08,249 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.100 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:22:08,385 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:08,601 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:08,820 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:09,038 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:09,257 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:09,476 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:09,621 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.100 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:22:09,689 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:09,795 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.100 | Attack: Brute Force | MITRE: T1110 | Action: Block IP & Lock Account
+2026-04-17 16:22:09,905 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:10,122 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:10,350 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:10,571 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:10,788 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:11,005 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:11,222 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:11,442 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:11,661 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:11,880 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:12,095 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:12,317 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:12,532 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:12,753 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:12,969 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:13,186 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:13,405 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:13,620 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:13,900 - ALERT - [Low] [Conf: 1.00] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:14,115 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:14,334 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:14,551 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:14,766 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:14,983 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:15,203 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:15,424 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:15,640 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:22:15,856 - ALERT - [Low] [Conf: 0.92] IP: 172.16.0.10 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:23,975 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:24,140 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:24,309 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:24,480 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:24,651 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:24,822 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:24,992 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:25,165 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:25,334 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:25,566 - ALERT - [Low] [Conf: 0.87] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:25,736 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:25,917 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:26,092 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:26,268 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:26,447 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:26,622 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:26,792 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:26,963 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:27,134 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:27,303 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:27,474 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:27,645 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:27,829 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:28,008 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:28,179 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:28,349 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:28,520 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:28,691 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:28,861 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:29,031 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:29,201 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:29,372 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:29,552 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:29,730 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:29,904 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:30,075 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:30,260 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:30,430 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:30,602 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:30,773 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:30,946 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:31,126 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:31,296 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:31,469 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:31,639 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:31,810 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:31,980 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:32,149 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:32,325 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:32,496 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:32,666 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:32,835 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:33,010 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:33,177 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:33,348 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:33,518 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:33,688 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:33,861 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:34,034 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:34,215 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:34,389 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:34,558 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:34,727 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:34,899 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:35,072 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:35,241 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:35,413 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:35,582 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:35,754 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:35,926 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:36,099 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:36,272 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.67 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:36,442 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.148 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:36,611 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.244 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:36,786 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.16 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:36,953 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.168 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:37,124 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.124 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:37,294 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.52 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:37,465 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.123 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:37,646 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.151 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:37,820 - ALERT - [Low] [Conf: 0.92] IP: 192.168.1.250 | Attack: Port Scan | MITRE: T1046 | Action: Close source ports
+2026-04-17 16:28:39,725 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.81 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:39,811 - ALERT - [Medium] [Conf: 0.80] IP: 192.168.1.84 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:39,882 - ALERT - [High] [Conf: 0.64] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:39,927 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.227 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:39,947 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.32 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:39,941 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.182 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:39,975 - ALERT - [High] [Conf: 0.65] IP: 192.168.1.23 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:39,971 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:39,992 - ALERT - [High] [Conf: 0.64] IP: 192.168.1.33 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:40,012 - ALERT - [High] [Conf: 0.67] IP: 192.168.1.144 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:40,678 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.182 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:41,693 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.33 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:42,297 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:42,540 - ALERT - [High] [Conf: 0.52] IP: 192.168.1.227 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:42,606 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.32 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:42,678 - ALERT - [High] [Conf: 0.84] IP: 192.168.1.144 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:42,852 - ALERT - [High] [Conf: 0.72] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:43,071 - ALERT - [High] [Conf: 0.65] IP: 192.168.1.23 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:44,048 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.144 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:44,491 - ALERT - [High] [Conf: 0.85] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:44,579 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:44,781 - ALERT - [High] [Conf: 0.67] IP: 192.168.1.144 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:44,851 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.227 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:45,340 - ALERT - [High] [Conf: 0.86] IP: 192.168.1.32 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:45,846 - ALERT - [High] [Conf: 0.51] IP: 192.168.1.23 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:46,280 - ALERT - [High] [Conf: 0.65] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:46,596 - ALERT - [High] [Conf: 0.65] IP: 192.168.1.227 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:46,779 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:46,844 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.144 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:46,988 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.23 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:47,253 - ALERT - [High] [Conf: 0.69] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:47,382 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.32 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:47,454 - ALERT - [High] [Conf: 0.73] IP: 192.168.1.227 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:48,027 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:48,789 - ALERT - [High] [Conf: 0.64] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:49,615 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.227 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:49,712 - ALERT - [High] [Conf: 0.64] IP: 192.168.1.23 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:49,732 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:49,856 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.32 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:50,135 - ALERT - [High] [Conf: 0.55] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:50,473 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:50,699 - ALERT - [Medium] [Conf: 0.62] IP: 192.168.1.32 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:51,386 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.227 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:51,737 - ALERT - [High] [Conf: 0.67] IP: 192.168.1.23 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:52,522 - ALERT - [High] [Conf: 0.69] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:52,740 - ALERT - [High] [Conf: 0.72] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:54,629 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.23 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:55,162 - ALERT - [High] [Conf: 0.67] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:55,541 - ALERT - [High] [Conf: 0.64] IP: 192.168.1.21 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:56,018 - ALERT - [High] [Conf: 0.65] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Rate Limit & Drop traffic
+2026-04-17 16:28:56,170 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.21 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
+2026-04-17 16:28:58,864 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:28:59,673 - ALERT - [High] [Conf: 0.54] IP: 192.168.1.195 | Attack: DoS | MITRE: T1499 | Action: Monitor Context
+2026-04-17 16:29:00,815 - ALERT - [CRITICAL] [Conf: 1.00] IP: 192.168.1.195 | Attack: Bot | MITRE: T1059 | Action: Challenge & Quarantine
