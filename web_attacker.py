@@ -20,6 +20,7 @@ def generate_ips(count):
     return [f"192.168.1.{random.randint(2, 254)}" for _ in range(count)]
 
 attack_ips = generate_ips(bot_count)
+session = requests.Session()
 
 # SQL Injection patterns
 SQL_PAYLOADS = [
@@ -39,7 +40,7 @@ def run_web_attack():
         src_ip = attack_ips[i % len(attack_ips)]
         try:
             # 1. Real SQLi attempt
-            requests.get(SEARCH_URL, params={"q": payload}, timeout=5.0)
+            session.get(SEARCH_URL, params={"q": payload}, timeout=5.0)
             
             # 2. Inform IPS
             ips_payload = {
@@ -51,7 +52,7 @@ def run_web_attack():
                 "protocol": "HTTP",
                 "attack_type": "Web Attack"
             }
-            requests.post(IPS_URL, json=ips_payload, timeout=2.0)
+            session.post(IPS_URL, json=ips_payload, timeout=2.0)
             print(f"[{src_ip}] Payload sent: {payload[:20]}...")
         except:
             pass

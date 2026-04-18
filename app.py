@@ -47,9 +47,12 @@ if st.sidebar.button("Clear Logs"):
     pass
 
 # Helper functions
+if 'http_session' not in st.session_state:
+    st.session_state.http_session = requests.Session()
+
 def fetch_data(endpoint):
     try:
-        response = requests.get(f"{BASE_URL}/{endpoint}", timeout=2) # Increased timeout
+        response = st.session_state.http_session.get(f"{BASE_URL}/{endpoint}", timeout=2) # Increased timeout
         return response.json() if response.status_code == 200 else []
     except Exception as e:
         # Show specific error in sidebar if fetch fails

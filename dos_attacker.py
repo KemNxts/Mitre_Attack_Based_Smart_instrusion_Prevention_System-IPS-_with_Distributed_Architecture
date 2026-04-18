@@ -21,6 +21,7 @@ def generate_ips(count):
     return [f"192.168.1.{random.randint(2, 254)}" for _ in range(count)]
 
 attack_ips = generate_ips(bot_count)
+session = requests.Session()
 
 def send_flooding_requests():
     print(f"🌊 Starting DoS Flood with {bot_count} bots against {target_ip}...")
@@ -38,7 +39,7 @@ def send_flooding_requests():
                 "attack_type": "DoS"
             }
             try:
-                requests.post(URL, json=payload, timeout=2.0)
+                session.post(URL, json=payload, timeout=2.0)
             except:
                 pass
 

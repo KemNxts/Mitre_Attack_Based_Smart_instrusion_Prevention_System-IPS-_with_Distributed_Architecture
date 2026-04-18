@@ -20,6 +20,7 @@ def generate_ips(count):
     return [f"192.168.1.{random.randint(2, 254)}" for _ in range(count)]
 
 attack_ips = generate_ips(bot_count)
+session = requests.Session()
 
 def bot_thread(source_ip):
     print(f"🤖 Bot Started: {source_ip} targeting {target_ip}...")
@@ -34,7 +35,7 @@ def bot_thread(source_ip):
             "attack_type": "Bot"
         }
         try:
-            requests.post(URL, json=payload, timeout=2.0)
+            session.post(URL, json=payload, timeout=2.0)
         except:
             pass
         time.sleep(random.uniform(0.5, 3.0))

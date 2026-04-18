@@ -20,6 +20,7 @@ def generate_ips(count):
     return [f"192.168.1.{random.randint(2, 254)}" for _ in range(count)]
 
 attack_ips = generate_ips(bot_count)
+session = requests.Session()
 
 def scan_ports(start_port, end_port):
     print(f"🔍 Starting Port Scan on {target_ip} using {bot_count} virtual IPs...")
@@ -45,7 +46,7 @@ def scan_ports(start_port, end_port):
                 "protocol": "TCP",
                 "attack_type": "Port Scan"
             }
-            requests.post(IPS_URL, json=payload, timeout=2.0)
+            session.post(IPS_URL, json=payload, timeout=2.0)
             print(f"[{src_ip}] Probed Port {port}")
         except:
             pass

@@ -23,6 +23,7 @@ password_list = [
 
 # Single IP for Brute Force for realism
 ip_simulated = "192.168.1.50"
+session = requests.Session()
 
 def run_attack():
     print(f"🚨 Starting Single-Source Brute Force Attack against {target_ip}...")
@@ -30,7 +31,7 @@ def run_attack():
     for attempt, pwd in enumerate(password_list, start=1):
         try:
             # 1. Login Attempt
-            response = requests.post(LOGIN_URL, json={
+            response = session.post(LOGIN_URL, json={
                 "ip": ip_simulated, "username": "admin", "password": pwd
             }, timeout=2)
             result = response.json()
@@ -45,7 +46,7 @@ def run_attack():
                 "protocol": "TCP",
                 "attack_type": "Brute Force"
             }
-            requests.post(IPS_URL, json=ips_payload, timeout=2.0)
+            session.post(IPS_URL, json=ips_payload, timeout=2.0)
             print(f"[Attempt {attempt}] Pwd='{pwd}' -> {result['status']}")
 
             if result['status'] in ['locked', 'success']:
