@@ -3,7 +3,6 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import os
 import joblib
-import pandas as pd
 from datetime import datetime
 
 from model import train_model
@@ -14,14 +13,14 @@ from preprocess import IPSPreprocessor
 
 app = Flask(__name__)
 
-# Initialize components
+# Components
 prevention = IPSPrevention()
 logger = IPSLogger()
 preprocessor = IPSPreprocessor()
 
-# --- CACHED ML COMPONENTS ---
+# ML Model
 GLOBAL_MODEL = None
-print("⚙️ Loading ML Protection Engine...")
+print("Loading ML Protection Engine...")
 
 def init_ml():
     global GLOBAL_MODEL
@@ -29,111 +28,224 @@ def init_ml():
     if not os.path.exists(model_path):
         train_model()
     GLOBAL_MODEL = joblib.load(model_path)
-    print("✅ ML Engine Active.")
+    print("ML Engine Active.")
 
 init_ml()
 
-# Rate limiting
+# Rate limiter
 limiter = Limiter(
-    get_remote_address, app=app,
+    get_remote_address,
+    app=app,
     default_limits=["5000 per hour"],
     storage_uri="memory://",
 )
 
 logs_history = []
 
+# ---------------- DETECTION ---------------- #
 def hybrid_detect(data):
-    # Features
     rate = data.get("request_rate", 0)
     failed = data.get("failed_logins", 0)
     size = data.get("packet_size", 0)
-    
-    # --- RULE-BASED LAYER (Overrides) ---
-    if failed >= 5: 
-        return "Brute Force", 1.0
-    if rate > 1200: 
-        return "DoS", 0.99
-    if size > 1500 and data.get("protocol") == "HTTP":
-        return "Web Attack", 0.95
-    if rate > 100 and size < 100:
-        return "Port Scan", 0.92
+    protocol = data.get("protocol", "")
 
-    # --- ML LAYER ---
+    if failed >= 2:
+        return "Brute Force", 0.95
+    if rate >= 1200:
+        return "DoS", 0.95
+    if protocol == "HTTP" and data.get("attack_type") == "Web Attack":
+        if rate > 20 or size > 1200:
+            return "Web Attack", 0.85
+    if size >= 1800 and protocol == "HTTP":
+        return "Web Attack", 0.80
+    if rate >= 100 and size <= 100:
+        return "Port Scan", 0.85
+    if 400 <= rate <= 800 and size >= 500:
+        return "Bot", 0.80
+
     try:
         X_scaled = preprocessor.preprocess(data)
         prediction = GLOBAL_MODEL.predict(X_scaled)[0]
         probs = GLOBAL_MODEL.predict_proba(X_scaled)[0]
         confidence = float(max(probs))
         return prediction, confidence
-    except Exception as e:
-        print(f"ML Error: {e}")
+    except Exception:
         return "Normal", 0.5
+
+
+# ---------------- STATE ---------------- #
+ip_data = {}
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
         data = request.get_json()
         ip = data.get("ip", "Unknown")
-        
-        # 1. Blacklist Check
-        if ip in prevention.blocked_ips:
+        now = datetime.now().timestamp()
+
+        if ip not in ip_data:
+            ip_data[ip] = {
+                "score": 0,
+                "attempts": 0,
+                "last_seen": now,
+                "blocked": False,
+                "block_reason": None
+            }
+
+        ip_state = ip_data[ip]
+        time_diff = now - ip_state["last_seen"]
+
+        # Cooldown
+        if time_diff > 60:
+            ip_state["score"] *= 0.5
+            ip_state["attempts"] = max(1, ip_state["attempts"] - 1)
+
+        prediction, confidence = hybrid_detect(data)
+
+        # ---------------- BLOCK HANDLING ---------------- #
+        if ip_state["blocked"]:
+            ip_state["last_seen"] = now
+
+            mitre_info = get_mitre(prediction)
+
             log_entry = {
                 "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                "ip": ip, "prediction": "BLOCKED SOURCE", "confidence": 1.0,
-                "tactic": "Persistence", "technique": "Blacklisted",
-                "description": "IP blocked due to previous malicious activity.",
-                "action": "Drop Traffic", "severity": "CRITICAL"
+                "ip": ip,
+                "prediction": prediction,
+                "confidence": float(confidence),
+                "status": "blocked",
+                "score": int(ip_state["score"]),
+                "attempts": ip_state["attempts"],
+                "tactic": mitre_info.get("tactic", "Unknown"),
+                "technique": mitre_info.get("technique", "Unknown"),
+                "description": mitre_info.get("description", ""),
+                # ✅ FIXED ACTION LINE ONLY
+                "action": f"Blocked ({prediction}) | Initial Block: {ip_state.get('block_reason', 'Unknown')}",
+                "severity": prevention.get_severity(prediction, confidence)
             }
-            if not logs_history or logs_history[-1]['ip'] != ip:
-                logs_history.append(log_entry)
-            return jsonify(log_entry), 403
 
-        # 2. Hybrid Detection
-        prediction, confidence = hybrid_detect(data)
+            logs_history.append(log_entry)
+
+            return jsonify({
+                "prediction": prediction,
+                "status": "blocked",
+                "score": int(ip_state["score"]),
+                "attempts": ip_state["attempts"],
+                "confidence": float(confidence),
+                "block_reason": ip_state.get("block_reason")
+            }), 403
+
+        # ---------------- SCORING ---------------- #
+        score_increment = 0
+
+        if prediction != "Normal":
+            score_increment += 25 if prediction == "Web Attack" else 15
+            score_increment += 10
+
+            if time_diff < 1:
+                score_increment += 10
+
+            ip_state["attempts"] += 1
+
+            if ip_state["attempts"] > 1:
+                ip_state["score"] += score_increment
+
+        # ---------------- STATUS ---------------- #
+        status = "allowed"
+
+        if ip_state["attempts"] >= 4 and ip_state["score"] >= 120:
+            status = "blocked"
+            ip_state["blocked"] = True
+            ip_state["block_reason"] = prediction
+            prevention.enforce_block(ip)
+
+        elif ip_state["attempts"] >= 2:
+            status = "suspicious"
+
+        ip_state["last_seen"] = now
+
+        # ---------------- LOGGING ---------------- #
         mitre_info = get_mitre(prediction)
-        action = prevention.get_action(prediction, ip, confidence)
+        action = prevention.get_action(prediction, ip, confidence, status)
         severity = prevention.get_severity(prediction, confidence)
 
-        # 3. Final Log
         log_entry = {
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "ip": ip, "prediction": prediction, "confidence": confidence,
+            "ip": ip,
+            "prediction": prediction,
+            "confidence": float(confidence),
+            "status": status,
+            "score": int(ip_state["score"]),
+            "attempts": ip_state["attempts"],
             "tactic": mitre_info.get("tactic", "Unknown"),
             "technique": mitre_info.get("technique", "Unknown"),
             "description": mitre_info.get("description", ""),
-            "action": action, "severity": severity
+            "action": action,
+            "severity": severity
         }
+
         logs_history.append(log_entry)
 
-        # 4. Console log for developer
-        logger.log_alert(ip, prediction, mitre_info, action, severity, confidence)
-        print(f"📡 [IPS] {ip} -> {prediction} ({confidence:.2f}) | Action: {action}")
-
-        return jsonify(log_entry)
+        return jsonify({
+            "prediction": prediction,
+            "status": status,
+            "score": int(ip_state["score"]),
+            "attempts": ip_state["attempts"],
+            "confidence": float(confidence
+        )}), 403 if status == "blocked" else 200
 
     except Exception as e:
-        print(f"Error: {e}")
         return jsonify({"error": str(e)}), 500
 
+
+# ---------------- ROUTES ---------------- #
+
 @app.route('/logs', methods=['GET'])
-def get_logs(): return jsonify(logs_history[-100:])
+def get_logs():
+    return jsonify(logs_history[-100:])
+
 
 @app.route('/stats', methods=['GET'])
 def get_stats():
     stats = {
-        "total_attacks": len([l for l in logs_history if l['prediction'] not in ['Normal', 'BLOCKED SOURCE']]),
+        "total_attacks": len([l for l in logs_history if l['prediction'] != 'Normal']),
+        "blocked": len([l for l in logs_history if l['status'] == 'blocked']),
         "severity_counts": {"CRITICAL": 0, "High": 0, "Medium": 0, "Low": 0},
         "attack_types": {}
     }
+
     for l in logs_history:
-        s = l['severity']
-        if s in stats["severity_counts"]: stats["severity_counts"][s]+=1
-        p = l['prediction']
-        stats["attack_types"][p] = stats["attack_types"].get(p, 0) + 1
+        stats["severity_counts"][l['severity']] += 1
+        stats["attack_types"][l['prediction']] = stats["attack_types"].get(l['prediction'], 0) + 1
+
+    recent_logs = logs_history[-60:]
+    unique_ips = set(l["ip"] for l in recent_logs)
+
+    ip_count = len(unique_ips)
+
+    if ip_count == 0:
+        attack_mode = "No Activity"
+    elif ip_count == 1:
+        attack_mode = "Single Attacker"
+    elif ip_count >= 5:
+        attack_mode = "Distributed Attack"
+    else:
+        attack_mode = "Mixed"
+
+    stats["attack_mode"] = attack_mode
+    stats["unique_ips"] = ip_count
+
     return jsonify(stats)
 
+
 @app.route('/blocked', methods=['GET'])
-def get_blocked(): return jsonify(list(prevention.blocked_ips))
+def get_blocked():
+    return jsonify(list(prevention.blocked_ips))
+
+
+# ---------------- RUN ---------------- #
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    print("🚀 IPS Server Running on http://127.0.0.1:5000")
+    app.run(host='127.0.0.1', port=5000, debug=True)

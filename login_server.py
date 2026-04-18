@@ -46,15 +46,47 @@ def login():
             "failed_attempts": failed_attempts[ip]
         })
 
-@app.route('/search', methods=['GET'])
+
+@app.route('/search', methods=['POST'])
 def search():
-    query = request.args.get('q', '')
-    # Simulated SQL injection vulnerable endpoint
-    if "OR '1'='1'" in query or "UNION SELECT" in query:
-        return jsonify({"status": "vulnerable", "message": "SQL Injection pattern detected in search query"}), 200
-    return jsonify({"status": "ok", "results": f"Searching for: {query}"}), 200
+    data = request.get_json()
+    if not data:
+        return jsonify({"status": "error", "message": "JSON body required"}), 400
+    
+    query = data.get('query', '')
+    ip = data.get('ip', 'unknown')
+    
+    q = query.upper()
+
+    # --- Graded SQLi Detection ---
+    suspicious_score = 0
+
+    if "' OR" in q:
+        suspicious_score += 2
+    if "--" in q:
+        suspicious_score += 1
+    if "UNION" in q:
+        suspicious_score += 2
+    if "DROP" in q:
+        suspicious_score += 3
+
+    # --- Decision Logic ---
+    if suspicious_score >= 3:
+        status = "suspicious"
+    elif suspicious_score > 0:
+        status = "low_suspicion"
+    else:
+        status = "ok"
+
+    return jsonify({
+        "status": status,
+        "message": f"Processed query: {query}",
+        "score": suspicious_score,
+        "ip": ip
+    }), 200
+
 
 if __name__ == '__main__':
-    print("🔐 Login Server Running on http://127.0.0.1:6000")
-    print("🔍 Search Endpoint: http://127.0.0.1:6000/search?q=test")
-    app.run(port=6000)
+    print("Login Server Running on http://127.0.0.1:6000")
+    print("Search Endpoint: http://127.0.0.1:6000/search")
+    app.run(host='127.0.0.1', port=6000)

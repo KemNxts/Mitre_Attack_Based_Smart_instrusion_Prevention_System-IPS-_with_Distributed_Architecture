@@ -38,5 +38,5 @@ class IPSLogger:
             f"IP: {ip} | Attack: {attack} | MITRE: {mitre['technique']} | Action: {action}"
         )
         self.alerts_logger.warning(message)
-        print(f"🚨 ALERT: {message}")
+        print(f"ALERT: {message}")
         return message

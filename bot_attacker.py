@@ -23,7 +23,7 @@ attack_ips = generate_ips(bot_count)
 session = requests.Session()
 
 def bot_thread(source_ip):
-    print(f"🤖 Bot Started: {source_ip} targeting {target_ip}...")
+    print(f"Bot Started: {source_ip} targeting {target_ip}...")
     while True:
         payload = {
             "ip": source_ip,
@@ -42,7 +42,7 @@ def bot_thread(source_ip):
 
 if __name__ == "__main__":
     threads = []
-    print(f"🤖 Launching {bot_count} bot threads...")
+    print(f"Launching {bot_count} bot threads...")
     for i in range(bot_count):
         src_ip = attack_ips[i % len(attack_ips)]
         t = threading.Thread(target=bot_thread, args=(src_ip,))
@@ -54,4 +54,4 @@ if __name__ == "__main__":
         while True:
             time.sleep(1)
     except KeyboardInterrupt:
-        print("\n🤖 Multi-Bot simulation stopped.")
+        print("\nMulti-Bot simulation stopped.")

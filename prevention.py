@@ -3,25 +3,30 @@ class IPSPrevention:
         self.blocked_ips = set()
         self.closed_ports = set()
         
-    def get_action(self, attack_type, ip, confidence=1.0):
+    def get_action(self, attack_type, ip, confidence=1.0, status="allowed"):
+        # 🚫 DO NOT block here — server.py controls blocking
+        if status == "blocked":
+            return "Block IP (Enforced by IPS)"
+
         if confidence < 0.6:
             return "Monitor Context"
             
         if attack_type == 'Brute Force':
-            self.blocked_ips.add(ip)
-            return "Block IP & Lock Account"
+            return "Monitor Login Attempts"
         elif attack_type == 'DoS':
-            return "Rate Limit & Drop traffic"
+            return "Rate Limit Traffic"
         elif attack_type == 'Port Scan':
-            self.closed_ports.add(ip)
-            return "Close source ports"
+            return "Monitor Ports"
         elif attack_type == 'Bot':
-            self.blocked_ips.add(ip)
-            return "Challenge & Quarantine"
+            return "Challenge Traffic"
         elif attack_type == 'Web Attack':
-            return "WAF Filter & Block request"
+            return "Apply WAF Filter"
         else:
             return "Allow"
+
+    def enforce_block(self, ip):
+        # ✅ Only called when server.py decides to block
+        self.blocked_ips.add(ip)
 
     def get_severity(self, attack_type, confidence=1.0):
         severity_map = {

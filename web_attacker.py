@@ -16,7 +16,7 @@ SEARCH_URL = f"http://{target_ip}:6000/search"
 IPS_URL = f"http://{target_ip}:5000/predict"
 
 def generate_ips(count):
-    if count == 1: return ["10.0.5.1"]
+    if count == 1: return ["192.168.1.100"]
     return [f"192.168.1.{random.randint(2, 254)}" for _ in range(count)]
 
 attack_ips = generate_ips(bot_count)
@@ -33,7 +33,7 @@ SQL_PAYLOADS = [
 ]
 
 def run_web_attack():
-    print(f"💉 Starting Distributed Web Attack against {target_ip}...")
+    print(f"Starting Distributed Web Attack against {target_ip}...")
     
     for i, payload in enumerate(SQL_PAYLOADS):
         # Rotate source IP

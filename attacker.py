@@ -70,8 +70,8 @@ def generate_traffic(attack_type):
 
 # Main loop
 def run_attacker():
-    print("🚀 Starting General Attack Simulation (Background Noise)...")
-    print("💡 FOR SPECIALIZED ATTACKS, RUN:")
+    print("Starting General Attack Simulation (Background Noise)...")
+    print("General Attack Simulation Ready...")
     print("   - python bruteforce_attacker.py")
     print("   - python dos_attacker.py")
     print("   - python port_scan_attacker.py")
@@ -102,7 +102,7 @@ def run_attacker():
             print("===================================\n")
 
         except Exception as e:
-            print("❌ Error sending request:", e)
+            print("Error sending request:", e)
 
         time.sleep(1)  # simulate real-time traffic
 

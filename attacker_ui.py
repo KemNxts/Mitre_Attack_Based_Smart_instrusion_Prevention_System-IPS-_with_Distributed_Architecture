@@ -76,14 +76,14 @@ def launch_attack(attack_type):
     script_path = os.path.join(os.path.dirname(__file__), ATTACK_SCRIPTS[attack_type])
     
     # Generate list of IPs for status display (scripts will generate their own too, but UI needs a list)
-    num_ips = bot_count if bot_mode and attack_type != 'bruteforce' else 1
+    num_ips = bot_count if bot_mode else 1
     generated_ips = [f"192.168.1.{random.randint(2, 254)}" for _ in range(num_ips)]
     if num_ips == 1: generated_ips = ["192.168.1.100"]
 
     try:
         # Build command with arguments
         cmd = [sys.executable, script_path, target_ip]
-        if bot_mode and attack_type != 'bruteforce':
+        if bot_mode:
             cmd.extend(['--bot-count', str(bot_count)])
 
         proc = subprocess.Popen(cmd, cwd=os.path.dirname(__file__))
@@ -92,8 +92,8 @@ def launch_attack(attack_type):
             'ips': generated_ips
         }
         
-        mode_str = f"Bot Mode ({bot_count} IPs)" if bot_mode and attack_type != 'bruteforce' else "Single IP"
-        print(f"🚀 [UI] Started {attack_type} in {mode_str} against {target_ip}")
+        mode_str = f"Bot Mode ({bot_count} IPs)" if bot_mode else "Single IP"
+        print(f"[UI] Started {attack_type} in {mode_str} against {target_ip}")
         return jsonify({"message": f"Successfully launched {attack_type} in {mode_str}."})
     except Exception as e:
         return jsonify({"message": f"Launch error: {str(e)}"}), 500

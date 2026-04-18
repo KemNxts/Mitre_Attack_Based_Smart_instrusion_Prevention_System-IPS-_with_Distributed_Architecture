@@ -74,6 +74,9 @@ if logs:
     df = pd.DataFrame(logs)
     df = df[::-1] # latest first
     
+    if 'confidence' not in df.columns:
+        df['confidence'] = 0.0
+    
     with col_stats:
         st.markdown("### 📊 Live Stats")
         if stats:
@@ -118,12 +121,12 @@ if logs:
     latest_alerts = df[df['prediction'] != 'Normal'].head(5)
     if not latest_alerts.empty:
         for idx, alert in latest_alerts.iterrows():
-            with st.expander(f"🔴 {alert['severity']} Alert: {alert['prediction']} from {alert['ip']} ({alert['timestamp']})"):
+            with st.expander(f"🔴 {alert.get('severity', 'Unknown')} Alert: {alert.get('prediction', 'Unknown')} from {alert.get('ip', 'Unknown')} ({alert.get('timestamp', 'Unknown')})"):
                 c1, c2, c3 = st.columns(3)
-                c1.write(f"**Technique:** {alert['technique']}")
-                c2.write(f"**Confidence:** {alert['confidence']:.2f}")
-                c3.write(f"**Action Taken:** {alert['action']}")
-                st.info(f"**MITRE Description:** {alert['description']}")
+                c1.write(f"**Technique:** {alert.get('technique', 'Unknown')}")
+                c2.write(f"**Confidence:** {alert.get('confidence', 0.0):.2f}")
+                c3.write(f"**Action Taken:** {alert.get('action', 'Unknown')}")
+                st.info(f"**MITRE Description:** {alert.get('description', '')}")
     else:
         st.success("No active threats detected.")
 

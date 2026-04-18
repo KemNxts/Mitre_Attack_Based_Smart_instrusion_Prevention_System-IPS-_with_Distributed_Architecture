@@ -131,8 +131,47 @@
             {% endfor %}
         </div>
 
+        <div id="attack-pattern-panel" style="
+            background: var(--card-bg);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-top: 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+        ">
+            <h3 style="margin:0 0 15px 0; color: #ff6b6b;">&#9888;&#65039; Attack Pattern Analysis</h3>
+            <div style="display:flex; gap:30px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:200px;">
+                    <div style="font-size:0.85rem; color:#888; margin-bottom:4px;">Detection Mode</div>
+                    <div id="attack-mode" style="
+                        font-size:1.4rem; font-weight:bold;
+                        padding:10px 16px; border-radius:8px;
+                        background:rgba(0,0,0,0.3); border:1px solid #333;
+                        color:#66ff66;
+                    ">Waiting...</div>
+                </div>
+                <div style="flex:1; min-width:200px;">
+                    <div style="font-size:0.85rem; color:#888; margin-bottom:4px;">Active Unique IPs (last 60 events)</div>
+                    <div id="ip-count" style="
+                        font-size:1.4rem; font-weight:bold;
+                        padding:10px 16px; border-radius:8px;
+                        background:rgba(0,0,0,0.3); border:1px solid #333;
+                        color:#4fc3f7;
+                    ">0</div>
+                </div>
+                <div style="flex:1; min-width:200px;">
+                    <div style="font-size:0.85rem; color:#888; margin-bottom:4px;">Total Attacks / Blocked</div>
+                    <div id="attack-blocked-count" style="
+                        font-size:1.4rem; font-weight:bold;
+                        padding:10px 16px; border-radius:8px;
+                        background:rgba(0,0,0,0.3); border:1px solid #333;
+                        color:#ffab40;
+                    ">0 / 0</div>
+                </div>
+            </div>
+        </div>
+
         <div id="log-container">
-            <h3>📡 Real-time Attack Logs</h3>
+            <h3>&#128225; Real-time Attack Logs</h3>
             <div id="logs">
                 [SYSTEM] Central Command Ready...
             </div>
@@ -149,6 +188,36 @@
         function validateIP(ip) {
             if (ip.toLowerCase() === 'localhost') return true;
             return /^(127\.0\.0\.1|192\.168\.\d{1,3}\.\d{1,3})$/.test(ip);
+        }
+
+        function updateStats() {
+            fetch('http://127.0.0.1:5000/stats')
+                .then(r => r.json())
+                .then(data => {
+                    const modeEl = document.getElementById('attack-mode');
+                    const mode = data.attack_mode || 'No Activity';
+                    modeEl.innerText = mode;
+
+                    // Color-code the mode
+                    if (mode === 'Distributed Attack') {
+                        modeEl.style.color = '#ff4444';
+                        modeEl.style.borderColor = '#ff4444';
+                    } else if (mode === 'Single Attacker') {
+                        modeEl.style.color = '#ffab40';
+                        modeEl.style.borderColor = '#ffab40';
+                    } else if (mode === 'Mixed') {
+                        modeEl.style.color = '#ffee58';
+                        modeEl.style.borderColor = '#ffee58';
+                    } else {
+                        modeEl.style.color = '#66ff66';
+                        modeEl.style.borderColor = '#333';
+                    }
+
+                    document.getElementById('ip-count').innerText = data.unique_ips || 0;
+                    document.getElementById('attack-blocked-count').innerText =
+                        (data.total_attacks || 0) + ' / ' + (data.blocked || 0);
+                })
+                .catch(() => {});
         }
 
         function updateStatus() {
@@ -179,7 +248,6 @@
                     const activeBotsDiv = document.getElementById('active-bots-display');
                     if (totalRunning > 0) {
                         activeBotsDiv.style.display = 'block';
-                        // Fetch active IPs if running
                         fetch('/active-ips')
                             .then(r => r.json())
                             .then(ips => {
@@ -243,6 +311,8 @@
         }
 
         setInterval(updateStatus, 2000);
+        setInterval(updateStats, 2000);
+        updateStats();
     </script>
 </body>
 </html>

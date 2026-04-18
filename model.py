@@ -29,19 +29,19 @@ def generate_synthetic_data(samples=3000): # Increased samples for better accura
             protocol = 'TCP'
         elif attack == 'Brute Force':
             req_rate = np.random.uniform(10, 80)
-            failed_logins = np.random.randint(10, 50) # Clear sign
+            failed_logins = np.random.randint(1, 40) # Broader range for distributed
             packet_size = np.random.uniform(300, 500)
             duration = np.random.uniform(0.5, 3)
             protocol = 'TCP'
         elif attack == 'Port Scan':
             req_rate = np.random.uniform(100, 500)
             failed_logins = 0
-            packet_size = np.random.uniform(40, 100) # Small packets for scanning
+            packet_size = np.random.uniform(40, 100)
             duration = np.random.uniform(0.01, 0.2)
             protocol = 'TCP'
         elif attack == 'Bot':
             req_rate = np.random.uniform(400, 800)
-            failed_logins = np.random.randint(1, 5)
+            failed_logins = np.random.randint(0, 5) # Align with bot_attacker.py (0-2)
             packet_size = np.random.uniform(500, 1200)
             duration = np.random.uniform(1, 5)
             protocol = np.random.choice(['TCP', 'UDP'])
@@ -64,20 +64,20 @@ def generate_synthetic_data(samples=3000): # Increased samples for better accura
     return pd.DataFrame(data)
 
 def train_model():
-    print("📊 Generating distinct synthetic training data...")
+    print("Generating distinct synthetic training data...")
     df = generate_synthetic_data(5000)
     
     preprocessor = IPSPreprocessor()
     X = preprocessor.preprocess(df, training=True)
     y = df['label']
     
-    print("🤖 Training Random Forest Classifier...")
+    print("Training Random Forest Classifier...")
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X, y)
     
     if not os.path.exists('models'): os.makedirs('models')
     joblib.dump(model, 'models/ips_model.joblib')
-    print("✅ Model saved to models/ips_model.joblib")
+    print("Model saved to models/ips_model.joblib")
     return model
 
 def get_prediction(data):

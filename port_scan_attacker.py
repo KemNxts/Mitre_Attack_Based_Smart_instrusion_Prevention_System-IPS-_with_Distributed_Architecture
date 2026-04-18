@@ -16,14 +16,14 @@ bot_count = args.bot_count
 IPS_URL = f"http://{target_ip}:5000/predict"
 
 def generate_ips(count):
-    if count == 1: return ["172.16.0.10"]
+    if count == 1: return ["192.168.1.100"]
     return [f"192.168.1.{random.randint(2, 254)}" for _ in range(count)]
 
 attack_ips = generate_ips(bot_count)
 session = requests.Session()
 
 def scan_ports(start_port, end_port):
-    print(f"🔍 Starting Port Scan on {target_ip} using {bot_count} virtual IPs...")
+    print(f"Starting Port Scan on {target_ip} using {bot_count} virtual IPs...")
     
     for port in range(start_port, end_port + 1):
         # Rotate source IP for each probe!
