@@ -4,6 +4,9 @@ from flask_limiter.util import get_remote_address
 import os
 import joblib
 from datetime import datetime
+import time
+import psutil
+import threading
 
 from model import train_model
 from mitre import get_mitre
@@ -29,6 +32,57 @@ def init_ml():
     print("ML Engine Active.")
 
 init_ml()
+
+# ---------------- RESOURCE MONITORING ---------------- #
+RESOURCE_ALERT_COOLDOWN = 30 # seconds
+last_resource_alert = 0
+
+def monitor_resources():
+    global last_resource_alert
+    while True:
+        try:
+            mem = psutil.virtual_memory()
+            if mem.percent > 85.0:
+                now = datetime.now().timestamp()
+                if now - last_resource_alert > RESOURCE_ALERT_COOLDOWN:
+                    last_resource_alert = now
+                    
+                    mitre_info = get_mitre("Resource Exhaustion")
+                    severity = prevention.get_severity("Resource Exhaustion")
+                    
+                    # Find the top process causing this
+                    procs = []
+                    for p in psutil.process_iter(['pid', 'name', 'memory_percent']):
+                        try:
+                            if p.info['memory_percent'] is not None:
+                                procs.append(p.info)
+                        except (psutil.NoSuchProcess, psutil.AccessDenied):
+                            pass
+                    
+                    procs = sorted(procs, key=lambda p: p['memory_percent'], reverse=True)
+                    top_offender = procs[0]['name'] if procs else "Unknown"
+
+                    logs_history.append({
+                        "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                        "ip": "localhost (HIDS)",
+                        "prediction": "Resource Exhaustion",
+                        "confidence": 1.0,
+                        "status": "alerted",
+                        "score": 100,
+                        "attempts": 1,
+                        "tactic": mitre_info.get("tactic", "Unknown"),
+                        "technique": mitre_info.get("technique", "Unknown"),
+                        "description": mitre_info.get("description", ""),
+                        "action": f"Alert: High RAM Usage ({mem.percent}%) - Top process: {top_offender}",
+                        "severity": severity
+                    })
+            time.sleep(5)
+        except Exception as e:
+            print("Resource Monitor Error:", e)
+            time.sleep(5)
+
+monitor_thread = threading.Thread(target=monitor_resources, daemon=True)
+monitor_thread.start()
 
 limiter = Limiter(get_remote_address, app=app, default_limits=["5000 per hour"], storage_uri="memory://")
 
@@ -268,6 +322,37 @@ def get_stats():
 @app.route('/blocked', methods=['GET'])
 def get_blocked():
     return jsonify(list(prevention.blocked_ips))
+
+
+@app.route('/system_stats', methods=['GET'])
+def system_stats():
+    mem = psutil.virtual_memory()
+    cpu = psutil.cpu_percent(interval=None)
+    
+    procs = []
+    for p in psutil.process_iter(['pid', 'name', 'username', 'memory_percent', 'cpu_percent', 'cmdline']):
+        try:
+            pinfo = p.info
+            cmd = " ".join(pinfo['cmdline']) if pinfo['cmdline'] else pinfo['name']
+            procs.append({
+                "pid": pinfo['pid'],
+                "user": pinfo['username'],
+                "cpu": round(pinfo['cpu_percent'] or 0.0, 1),
+                "mem": round(pinfo['memory_percent'] or 0.0, 1),
+                "cmd": cmd
+            })
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            pass
+
+    procs = sorted(procs, key=lambda p: p['mem'], reverse=True)[:100]
+
+    return jsonify({
+        "cpu_percent": cpu,
+        "ram_percent": mem.percent,
+        "ram_used_gb": round(mem.used / (1024**3), 2),
+        "ram_total_gb": round(mem.total / (1024**3), 2),
+        "top_processes": procs
+    })
 
 
 if __name__ == '__main__':

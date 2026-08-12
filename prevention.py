@@ -15,6 +15,8 @@ class IPSPrevention:
             return "Monitor Login Attempts"
         elif attack_type == 'DoS':
             return "Rate Limit Traffic"
+        elif attack_type == 'Resource Exhaustion':
+            return "Terminate offending processes (HIDS)"
         elif attack_type == 'Port Scan':
             return "Monitor Ports"
         elif attack_type == 'Bot':
@@ -31,6 +33,7 @@ class IPSPrevention:
     def get_severity(self, attack_type, confidence=1.0):
         severity_map = {
             'DoS': 'High',
+            'Resource Exhaustion': 'CRITICAL',
             'Web Attack': 'High',
             'Brute Force': 'Medium',
             'Bot': 'Medium',
@@ -39,6 +42,6 @@ class IPSPrevention:
         }
         base_severity = severity_map.get(attack_type, 'Low')
         
-        if confidence > 0.9 and base_severity != 'Low':
+        if confidence > 0.9 and base_severity != 'Low' and attack_type != 'Resource Exhaustion':
             return "CRITICAL"
         return base_severity

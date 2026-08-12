@@ -25,6 +25,11 @@ def get_mitre(attack_type):
             'technique': 'T1190',
             'description': 'Adversaries may exploit software vulnerabilities in internet-facing applications to gain access.'
         },
+        'Resource Exhaustion': {
+            'tactic': 'Impact',
+            'technique': 'T1499',
+            'description': 'Adversaries may exhaust system resources (like RAM or CPU) to deny availability.'
+        },
         'Normal': {
             'tactic': 'None',
             'technique': 'None',

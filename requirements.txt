@@ -7,3 +7,5 @@ streamlit
 requests
 plotly
 flask-limiter
+psutil
+matplotlib
