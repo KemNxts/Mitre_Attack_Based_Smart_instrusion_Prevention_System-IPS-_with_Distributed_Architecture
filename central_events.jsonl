@@ -1,0 +1,2 @@
+{"agent_id": "test-agent", "timestamp": "2026-08-13 18:24:28", "attack_name": "Test Attack Alpha", "action": "DETECT_ONLY", "_server_receipt_ip": "127.0.0.1"}
+{"agent_id": "test-agent", "timestamp": "2026-08-13 18:24:40", "attack_name": "Queued Offline Attack", "action": "DETECT_ONLY", "_server_receipt_ip": "127.0.0.1"}

@@ -1,11 +1,8 @@
 flask
 pandas
 numpy
-scikit-learn
-joblib
 streamlit
 requests
 plotly
-flask-limiter
 psutil
-matplotlib
+waitress

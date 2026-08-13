@@ -1,0 +1,18 @@
+[Unit]
+Description=Smart HIDS Hybrid Detection Engine
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/hids
+# Requires sudo if not run as root, but User=root handles it.
+# We pass SUDO_USER so the HIDS knows whose home directory to monitor.
+Environment=SUDO_USER=root
+# Change SUDO_USER to the actual human user you want to protect!
+ExecStart=/opt/hids/venv/bin/python run_hybrid.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

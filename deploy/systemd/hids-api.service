@@ -1,0 +1,15 @@
+[Unit]
+Description=Smart HIDS API Gateway (Waitress)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+# Change User to your standard unprivileged user in production!
+WorkingDirectory=/opt/hids
+ExecStart=/opt/hids/venv/bin/python server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

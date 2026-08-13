@@ -120,5 +120,6 @@ def system_stats():
     })
 
 if __name__ == '__main__':
-    print("🚀 API Gateway for Smart HIDS Dashboard Running on http://127.0.0.1:5000")
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    from waitress import serve
+    print("🚀 API Gateway for Smart HIDS Dashboard Running via Waitress on http://127.0.0.1:5000")
+    serve(app, host='127.0.0.1', port=5000)

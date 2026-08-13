@@ -5,8 +5,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+import os
+
 # IPS Server URL (Now acting as API Gateway for HIDS logs)
-BASE_URL = "http://127.0.0.1:5000"
+BASE_URL = os.environ.get("HIDS_API_URL", "http://127.0.0.1:5000")
 
 st.set_page_config(
     page_title="Smart IPS Dashboard",

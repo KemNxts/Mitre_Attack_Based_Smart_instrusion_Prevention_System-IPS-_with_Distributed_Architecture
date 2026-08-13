@@ -43,6 +43,14 @@ EVENT_LOG_FILE     = os.path.join(DATA_DIR, "event_log.json")
 FAST_SCAN_INTERVAL = 0.5  # For process-based behavioral telemetry (psutil)
 SLOW_SCAN_INTERVAL = 10.0 # For filesystem and persistence configuration checks
 
+# ── Central Server Socket Communication ─────────────────────────────────────
+HIDS_SOCKET_ENABLED = True
+HIDS_SERVER_HOST = os.environ.get("HIDS_SERVER_HOST", "127.0.0.1")
+HIDS_SERVER_PORT = int(os.environ.get("HIDS_SERVER_PORT", 9999))
+HIDS_AGENT_ID = os.environ.get("HIDS_AGENT_ID", f"agent-{TARGET_USER}")
+HIDS_SOCKET_RECONNECT_INTERVAL = 5  # seconds between reconnection attempts
+HIDS_SOCKET_QUEUE_LIMIT = 1000      # maximum unsent events to hold in memory
+
 # ── Attack Definitions ──────────────────────────────────────────────────────
 # Each attack has:
 #   - id:           unique string identifier

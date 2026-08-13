@@ -1,0 +1,16 @@
+[Unit]
+Description=Smart HIDS Dashboard (Streamlit)
+After=network.target hids-api.service
+
+[Service]
+Type=simple
+User=root
+# Change User to your standard unprivileged user in production!
+WorkingDirectory=/opt/hids
+Environment=HIDS_API_URL=http://127.0.0.1:5000
+ExecStart=/opt/hids/venv/bin/streamlit run app.py --server.port 8501 --server.headless true
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

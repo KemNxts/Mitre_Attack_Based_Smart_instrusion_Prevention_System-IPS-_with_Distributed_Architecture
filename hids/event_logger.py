@@ -14,7 +14,8 @@ import threading
 from datetime import datetime
 from collections import deque
 
-from hids.config import EVENT_LOG_FILE
+from hids.config import EVENT_LOG_FILE, HIDS_AGENT_ID
+from hids.communication.socket_client import SocketClient
 
 
 class EventLogger:
@@ -27,6 +28,10 @@ class EventLogger:
         self._lock = threading.Lock()
         self._buffer: deque = deque(maxlen=self.MAX_BUFFER)
         self._load_existing()
+        
+        # Initialize and start socket client for telemetry forwarding
+        self._socket_client = SocketClient()
+        self._socket_client.start()
 
     def _load_existing(self):
         """Load previously logged events into the in-memory buffer."""
@@ -64,6 +69,7 @@ class EventLogger:
         details      : optional extra info
         """
         event = {
+            "agent_id":     HIDS_AGENT_ID,
             "timestamp":    datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "attack_id":    attack_id,
             "attack_name":  attack_name,
@@ -78,6 +84,10 @@ class EventLogger:
         with self._lock:
             self._buffer.append(event)
             self._persist()
+            
+        # Queue for remote forwarding
+        self._socket_client.queue_event(event)
+        
         return event
 
     def get_recent(self, n: int = 50) -> list:
