@@ -1,34 +1,30 @@
 # Smart IPS: MITRE ATT&CK-Based Intrusion Prevention System
 
 ### 🛡️ Secure. Intelligent. Distributed.
-A professional-grade cybersecurity platform that implements a **Smart Intrusion Prevention System (IPS)** using a high-performance hybrid detection engine (Machine Learning + Rule-Based) mapped against the **MITRE ATT&CK Framework**.
+A professional-grade cybersecurity platform that implements a **Smart Host-Based Intrusion Detection and Prevention System (HIDS/IPS)** mapped against the **MITRE ATT&CK Framework**.
 
 ---
 
 ## 🚀 Key Features
 
-### 🧠 Advanced Hybrid Detection
-- **Random Forest ML Engine**: Sub-millisecond traffic classification using pre-loaded in-memory models and scalers.
-- **Strategic Rule Layer**: Immediate, high-precision detection for known malicious signatures (Brute Force, DoS, SQLi).
-- **Adaptive Mitigation**: Automated "Drop Traffic", "Account Lockout", and "IP Quarantine" responses.
+### 🧠 Biological OS Telemetry Detection
+- **Hybrid Behavioral Engine**: Uses real OS-level signals (process trees, memory usage, configuration files, and `psutil` telemetry) rather than simulated network traffic.
+- **Threat Memory**: Stateful detection that logs suspicious behavior on the first occurrence and actively prevents it on the second occurrence.
+- **Surgical Prevention**: Uses precise OS commands (e.g., `pkill` on process trees, safely rewriting `crontab`, or deleting malicious systemd files) without destroying legitimate system operations.
 
-### 🎮 Web-Based Attacker Control Panel (V3 Bot-Enabled)
-- **Bot Mode (Multi-IP Simulation)**: Simulate distributed attacks (DDoS) from up to 50 unique virtual sources (`192.168.1.x`) simultaneously.
-- **Threaded Execution**: High-volume, concurrent attack vectors using Python-native threading for realistic stress-testing.
-- **Dynamic Targeting**: Specify any local network target (e.g., `192.168.x.x`) directly from the UI.
-- **Security Validation**: Built-in dual-layer IP filtering to ensure simulations stay within safe network boundaries.
-
-### 🎯 MITRE ATT&CK Mapping
-Every detection is automatically mapped to professional tactics and techniques:
-- **T1110 (Brute Force)**: Credential Access
-- **T1499 (DoS)**: Impact
-- **T1046 (Network Service Discovery)**: Reconnaissance
-- **T1059 (Bot/Scripting)**: Execution
-- **T1190 (Web/Initial Access)**: Vulnerability exploitation
+### 🎯 7 Canonical MITRE ATT&CK Host Behaviors
+The system strictly monitors for the following 7 real-world attack techniques:
+1. **Parent-Child Memory Eater (T1496)**: Impact / Resource Exhaustion
+2. **Cron Persistence (T1053.003)**: Persistence via scheduled tasks
+3. **Systemd User Service Persistence (T1543.002)**: Persistence via rogue services
+4. **Discovery Burst (T1082 / T1057)**: Rapid recon commands (whoami, id, etc.)
+5. **Staging / Collection (T1074.001)**: Rapid compression of data in `/tmp`
+6. **Process Masquerading (T1036.005)**: Deceptive process names running from user directories
+7. **Shell RC Persistence (T1546.004)**: Malicious modifications to `.bashrc` or `.zshrc`
 
 ### 📊 Real-Time Analytics Dashboard
 - **Plotly Visualizations**: Dynamic charts for severity distribution and attack frequency.
-- **Identity Tracking**: Monitor dozens of attacking IPs in real-time as the botnet scales.
+- **API Gateway**: A lightweight Flask server that serves real HIDS `event_log.json` telemetry to the dashboard.
 - **Modern UI**: Dark-mode glassmorphism theme with instant state updates.
 
 ---
@@ -40,59 +36,40 @@ Every detection is automatically mapped to professional tactics and techniques:
 pip install -r requirements.txt
 ```
 
-### 2. Launch the Environment (3 Terminals)
-Open three terminals/tabs and run:
+### 2. Launch the Environment
+The environment expects a 2-machine testing architecture: an external **Kali Linux attacker** and the protected **Ubuntu Target**.
+
+On the Ubuntu Target, open two terminals and run:
 
 ```bash
-# Terminal 1: IPS Detection Server
-python server.py
+# Terminal 1: Smart HIDS Engine & API Gateway
+python server.py &
+python run_hybrid.py
 
-# Terminal 2: Target Vulnerable App
-python login_server.py
-
-# Terminal 3: Smart Monitoring Dashboard
+# Terminal 2: Smart Monitoring Dashboard
 streamlit run app.py
 ```
 
-### 3. Launch the Attacker UI
-Open a fourth terminal to access the central attack controller:
-```bash
-python attacker_ui.py
-```
-1. Visit `http://127.0.0.1:7000`.
-2. Configure your **Target IP**.
-3. Enable **Bot Mode** and set the number of virtual attackers.
-4. Click **Launch Attack** on any vector.
-
----
-
-## 🔍 Attack Vector Mechanics
-
-| Vector | Script | Bot Mode Logic |
-| :--- | :--- | :--- |
-| **DoS Flood** | `dos_attacker.py` | Threaded multi-source flooding |
-| **Botnet** | `bot_attacker.py` | Concurrent multi-IP persistent traffic |
-| **Port Scan** | `port_scan_attacker.py` | IP identity rotation per port probe |
-| **Web Attack** | `web_attacker.py` | Distributed SQLi payloads |
-| **Brute Force** | `bruteforce_attacker.py` | Sequential single-source (Realism) |
+### 3. Attack the Target
+From a separate Kali Linux machine, SSH into the Ubuntu target and execute real OS behaviors (e.g., creating a rogue cron job, or running a memory exhaustion script). The HIDS will detect the behavior, map it to MITRE, and the Dashboard will visualize the alert and mitigation.
 
 ---
 
 ## 📁 File Structure
 
 ```text
-├── server.py             # Optimized IPS Engine (Port 5000)
-├── app.py                # Streamlit Dashboard (Port 8501)
-├── attacker_ui.py        # Web Control Panel (Port 7000)
-├── login_server.py       # Vulnerable Simulation Target (Port 6000)
-├── model.py              # ML Training & Synthetic Data Logic
-├── mitre.py              # ATT&CK Framework Mappings
-├── prevention.py         # Advanced Mitigation Rules
-├── preprocess.py         # Feature Scaling & Encoding
-└── [Attacker Scripts]    # Threaded multi-IP threat simulators
+├── hids/                 # Core Host-Based Intrusion Detection Engine
+│   ├── behavioral/       # Hybrid detection logic and OS telemetry collectors
+│   ├── response_engine.py# Surgical prevention scripts
+│   ├── event_logger.py   # JSON logging for Threat Memory
+│   └── data/             # Persistent event logs
+├── server.py             # Lightweight API Gateway for the Dashboard (Port 5000)
+├── app.py                # Streamlit UI Dashboard (Port 8501)
+├── run_hybrid.py         # Entrypoint for the HIDS Engine
+└── mitre.py              # ATT&CK Framework Mappings
 ```
 
 ---
 
-## ⚠️ Safety Disclaimer
-This system is intended for **research and educational purposes only**. The Attacker UI strictly enforces local network boundaries and will only simulate traffic against private IP ranges (`127.0.0.1`, `localhost`, `192.168.x.x`). Internal IP generation is purely virtual and does not involve real packet spoofing at the network level.
+## ⚠️ Laboratory Architecture
+This system is intended for **research and educational purposes only**. Testing should be performed using an external attacker machine (e.g., Kali Linux) targeting the protected Ubuntu system running this software. Do not run the HIDS on production systems without fully understanding the surgical prevention commands (`pkill`, `os.remove`, etc.) it may execute automatically.
